@@ -43,6 +43,7 @@ jobs:
 
       - name: Check subconverter
         run: |
+          cp -f subconverter/pref.example.ini subconverter/pref.ini
           sudo chmod +x subconverter/subconverter.exe
           sed -i 's/api_mode=false/api_mode=true/g' subconverter/pref.ini
           sed -i 's/managed_config_prefix=http:\/\/127.0.0.1:25500/managed_config_prefix=https:\/\/firefly-sub.vercel.app/g' subconverter/pref.ini
