@@ -1,7 +1,7 @@
 {% if request.target == "clash" or request.target == "clashr" %}
 
 mixed-port: {{ default(global.clash.http_port, "8888") }}
-socks-port: {{ default(global.clash.socks_port, "8890") }}
+redir-port-port: {{ default(global.clash.redir_port, "8890") }}
 #authentication:
 #  - "firefly:WJ960923"
 allow-lan: {{ default(global.clash.allow_lan, "true") }}
@@ -23,6 +23,7 @@ tun:
     - 198.18.0.2:53 # when `fake-ip-range` is 198.18.0.1/16, should hijack 198.18.0.2:53
   macOS-auto-route: true # auto set global route for Windows
   macOS-auto-detect-interface: true # auto detect interface, conflict with `interface-name`
+#interface-name: WLAN
 hosts:
 dns:
   enable: true
