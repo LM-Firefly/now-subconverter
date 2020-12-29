@@ -15,7 +15,7 @@ jobs:
         node-version: [10.x]
 
     steps:
-      - uses: actions/checkout@v2.3.4
+      - uses: actions/checkout@v2
 
       - name: Update sub-web
         run: |
@@ -42,7 +42,7 @@ jobs:
           mv temp sub-web
 
       - name: Add & Commit
-        uses: EndBug/add-and-commit@v5.2.0
+        uses: EndBug/add-and-commit@v6
         with:
           author_name: GitHub Action
           author_email: noreply@github.com
