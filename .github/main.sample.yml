@@ -14,17 +14,14 @@ jobs:
       uses: actions/checkout@v2
     - name: Prepare
       run: |
-        rm -rf subconverter
+        cd /tmp
         git clone https://github.com/tindy2013/subconverter.git
     - name: Build
-      run: docker run -v $GITHUB_WORKSPACE/subconverter:/root/workdir multiarch/alpine:amd64-latest-stable /bin/sh -c "apk add bash git && cd /root/workdir && chmod +x scripts/build.alpine.release.sh && bash scripts/build.alpine.release.sh"
+      run: docker run -v /tmp/subconverter:/root/workdir multiarch/alpine:amd64-latest-stable /bin/sh -c "apk add bash git nodejs npm && cd /root/workdir && chmod +x scripts/build.alpine.release.sh && bash scripts/build.alpine.release.sh"
     - name: Clean up
       run: |
-        mkdir temp
-        mv -f subconverter/subconverter/* temp/
-        sudo chattr -R -i subconverter
         sudo rm -rf subconverter
-        mv -f temp subconverter
+        mv -f /tmp/subconverter/subconverter subconverter
         mv -f subconverter/subconverter subconverter/subconverter.exe
         sudo chmod +x subconverter/subconverter.exe
     - name: Modify pref.ini
