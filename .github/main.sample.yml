@@ -4,18 +4,18 @@ on:
   workflow_dispatch:
   schedule:
     - cron: 0 0 1 * *
-   
+
 jobs:
   Build:
     name: Build and Update
-    runs-on: ubuntu-latest 
+    runs-on: ubuntu-latest
     steps:
     - name: Checkout
       uses: actions/checkout@v2
     - name: Prepare
       run: |
         cd /tmp
-        git clone https://github.com/tindy2013/subconverter.git
+        git clone https://github.com/LM-Firefly/subconverter.git
     - name: Build
       run: docker run -v /tmp/subconverter:/root/workdir multiarch/alpine:amd64-latest-stable /bin/sh -c "apk add bash git nodejs npm && cd /root/workdir && chmod +x scripts/build.alpine.release.sh && bash scripts/build.alpine.release.sh"
     - name: Clean up
