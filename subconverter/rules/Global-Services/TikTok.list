@@ -1,4 +1,9 @@
+<<<<<<< HEAD:subconverter/rules/Global-Services/TikTok.list
 ## > TikTok
+=======
+# 内容：TikTok
+# 数量：11条
+>>>>>>> upstream/master:subconverter/rules/ACL4SSR/Clash/Ruleset/TikTok.list
 USER-AGENT,TikTok*
 DOMAIN-KEYWORD,-tiktokcdn-com
 DOMAIN,p16-tiktokcdn-com.akamaized.net
@@ -9,8 +14,11 @@ DOMAIN-SUFFIX,ibyteimg.com
 DOMAIN-SUFFIX,ipstatp.com
 DOMAIN-SUFFIX,muscdn.com
 DOMAIN-SUFFIX,musical.ly
+<<<<<<< HEAD:subconverter/rules/Global-Services/TikTok.list
 DOMAIN-SUFFIX,sgpstatp.com
 DOMAIN-SUFFIX,snssdk.com
+=======
+>>>>>>> upstream/master:subconverter/rules/ACL4SSR/Clash/Ruleset/TikTok.list
 DOMAIN-SUFFIX,tik-tokapi.com
 DOMAIN-SUFFIX,tiktok.com
 DOMAIN-SUFFIX,tiktokcdn.com
