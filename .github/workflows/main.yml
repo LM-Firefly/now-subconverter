@@ -84,7 +84,7 @@ jobs:
       id: get_sha
       uses: mego22/actions-git-sha@main
       with:
-        repo: "https://github.com/tindy2013/subconverter.git"
+        repo: "https://github.com/LM-Firefly/subconverter.git"
     - name: '[action]Wait for build to succeed'
       if: ${{ env.branch == 'action' }}
       uses: fountainhead/action-wait-for-check@v1.0.0
