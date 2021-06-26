@@ -7,7 +7,7 @@
     { "src": "sub-web/**", "use": "@vercel/static" },
     {
       "src": "subconverter/subconverter.exe",
-      "use": "@vercel-static-bin",
+      "use": "@now-static-bin",
       "config": {
         "port": 25500,
         "timeout": 5000,
