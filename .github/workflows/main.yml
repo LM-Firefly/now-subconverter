@@ -94,7 +94,7 @@ jobs:
         checkName: "Linux x86_64 Build"
         ref: ${{ steps.get_sha.outputs.sha }}
         repo: subconverter
-        owner: tindy2013
+        owner: LM-Firefly
         intervalSeconds: 30
     - name: '[action]Download artifact'
       if: ${{ env.branch == 'action' && steps.wait.outputs.conclusion == 'success' }}
@@ -104,7 +104,7 @@ jobs:
         commit: ${{ steps.get_sha.outputs.sha }}
         name: subconverter_linux64
         path: /tmp/subconverter
-        repo: tindy2013/subconverter
+        repo: LM-Firefly/subconverter
     - name: '[action]Clean up'
       if: ${{ env.branch == 'action' }}
       run: |
@@ -133,7 +133,7 @@ jobs:
       if: ${{ env.branch == 'release' }}
       uses: i3h/download-release-asset@v1
       with:
-        owner: tindy2013
+        owner: LM-Firefly
         repo: subconverter
         tag: ${{ env.tag }}
         file: "subconverter_linux64.tar.gz"
