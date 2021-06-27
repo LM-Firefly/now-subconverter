@@ -51,4 +51,4 @@ jobs:
           message: "Update sub-web from LM-Firefly/sub-web"
           add: "-A"
         env:
-          {secrets.GITHUB_TOKEN}: ${{ secrets.REPO_TOKEN }}
+          { secrets.GITHUB_TOKEN }: ${{ secrets.REPO_TOKEN }}
