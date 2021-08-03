@@ -4,10 +4,10 @@
     "silent": true
   },
   "builds": [
-    { "src": "sub-web/**", "use": "@vercel/static-build" },
+    { "src": "sub-web/**", "use": "@vercel/static" },
     {
       "src": "subconverter/subconverter.exe",
-      "use": "@vercel/static-build",
+      "use": "@vercel/static",
       "config": {
         "port": 25500,
         "timeout": 3000,
