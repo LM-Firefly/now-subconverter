@@ -56,20 +56,6 @@ DOMAIN,dmqdd6hw24ucf.cloudfront.net
 DOMAIN-KEYWORD,avoddashs
 ## > Americasvoice
 DOMAIN-SUFFIX,americasvoice.news
-## > AppleDaily
-DOMAIN-SUFFIX,appledaily.com
-DOMAIN-SUFFIX,appledaily.hk
-DOMAIN-SUFFIX,appledaily.com.hk
-DOMAIN-SUFFIX,appledaily.com.tw
-DOMAIN-SUFFIX,atnext.com
-DOMAIN-SUFFIX,nextmedia.com
-DOMAIN-SUFFIX,nextdigital.com.hk
-DOMAIN-SUFFIX,nextmag.com.tw
-DOMAIN-SUFFIX,nexttv.com.tw
-DOMAIN-SUFFIX,eracom.com.tw
-DOMAIN-SUFFIX,nextmgz.com
-DOMAIN-SUFFIX,next.hk
-DOMAIN-SUFFIX,sharpdaily.tw
 ## > ATTWatchTV
 DOMAIN-SUFFIX,att.tv
 DOMAIN-SUFFIX,atttvnow.com
@@ -170,6 +156,14 @@ DOMAIN-SUFFIX,cnn.it
 DOMAIN-SUFFIX,cnnarabic.com
 DOMAIN-SUFFIX,cnnlabs.com
 DOMAIN-SUFFIX,cnnmoney.ch
+## > CW Seed
+PROCESS-NAME,com.cw.fullepisodes.android
+PROCESS-NAME,com.cw.seed.android
+DOMAIN-SUFFIX,cwseed.com
+DOMAIN-SUFFIX,cwtv.com
+DOMAIN-SUFFIX,thecwvideo.com
+DOMAIN,cwtv-amd-akamai.akamaized.net
+DOMAIN,edge.cwtv-vod-ext.top.comcast.net
 ## > Dailymotion
 DOMAIN-SUFFIX,dai.ly
 DOMAIN-SUFFIX,dailymotion.com
@@ -1511,6 +1505,8 @@ DOMAIN-SUFFIX,vimeoondemand.com
 DOMAIN-SUFFIX,vimeostatus.com
 DOMAIN-SUFFIX,livestream.com
 ## > ViuTV
+PROCESS-NAME,com.viu.pad
+PROCESS-NAME,com.viu.phone
 PROCESS-NAME,com.vuclip.viu
 DOMAIN-SUFFIX,viu.com
 DOMAIN-SUFFIX,viu.tv
@@ -1573,6 +1569,7 @@ DOMAIN-SUFFIX,voatour.com
 DOMAIN-SUFFIX,voazimbabwe.com
 DOMAIN-SUFFIX,zeriamerikes.com
 ## > WeTV
+PROCESS-NAME,com.tencent.qqlivei18n
 PROCESS-NAME,com.tencent.qqlivei18n.us
 DOMAIN-SUFFIX,wetv.vip
 DOMAIN-SUFFIX,wetvinfo.com

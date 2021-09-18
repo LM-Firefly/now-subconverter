@@ -206,9 +206,6 @@ DOMAIN-SUFFIX,aboutamazon.in
 DOMAIN-SUFFIX,aboutamazon.it
 DOMAIN-SUFFIX,aboutamazon.jp
 DOMAIN-SUFFIX,aboutamazon.pl
-DOMAIN-SUFFIX,acmvalidations.com
-DOMAIN-SUFFIX,acmvalidationsaws.com
-DOMAIN-SUFFIX,aesworkshops.com
 DOMAIN-SUFFIX,alexa.com
 DOMAIN-SUFFIX,alexafund.cn
 DOMAIN-SUFFIX,alexafund.com.cn
@@ -240,10 +237,6 @@ DOMAIN-SUFFIX,amazon.red
 DOMAIN-SUFFIX,amazon.sg
 DOMAIN-SUFFIX,amazonalexavoxcon.com
 DOMAIN-SUFFIX,amazonauthorinsights.com
-DOMAIN-SUFFIX,amazonaws-china.com
-DOMAIN-SUFFIX,amazonaws.co.uk
-DOMAIN-SUFFIX,amazonaws.com
-DOMAIN-SUFFIX,amazonaws.tv
 DOMAIN-SUFFIX,amazonbusiness.cn
 DOMAIN-SUFFIX,amazonbusiness.com.cn
 DOMAIN-SUFFIX,amazonbusiness.org
@@ -272,24 +265,11 @@ DOMAIN-SUFFIX,amazonsdi.com
 DOMAIN-SUFFIX,amazonstudiosguilds.com
 DOMAIN-SUFFIX,amazontrust.com
 DOMAIN-SUFFIX,amazonvideodirect.com
-DOMAIN-SUFFIX,amazonworkdocs.cn
-DOMAIN-SUFFIX,amazonworkdocs.com
-DOMAIN-SUFFIX,amazonworkdocs.com.cn
-DOMAIN-SUFFIX,amplifyapp.com
-DOMAIN-SUFFIX,amplifyframework.com
 DOMAIN-SUFFIX,amzn.com
 DOMAIN-SUFFIX,amzn.to
 DOMAIN-SUFFIX,amznl.com
 DOMAIN-SUFFIX,assoc-amazon.cn
 DOMAIN-SUFFIX,associates-amazon.com
-DOMAIN-SUFFIX,aws-iot-hackathon.com
-DOMAIN-SUFFIX,awsautopilot.com
-DOMAIN-SUFFIX,awsautoscaling.com
-DOMAIN-SUFFIX,awsbraket.com
-DOMAIN-SUFFIX,awscommandlineinterface.com
-DOMAIN-SUFFIX,awsedstart.com
-DOMAIN-SUFFIX,awseducate.com
-DOMAIN-SUFFIX,awseducate.net
 DOMAIN-SUFFIX,awseducate.org
 DOMAIN-SUFFIX,awsloft-johannesburg.com
 DOMAIN-SUFFIX,awsloft-stockholm.com
@@ -315,10 +295,6 @@ DOMAIN-SUFFIX,ueberamazon.de
 DOMAIN-SUFFIX,yamaxun.cn
 DOMAIN-SUFFIX,yamaxun.com
 DOMAIN-SUFFIX,z.cn
-DOMAIN,d1b183sg0nvnuh.cloudfront.net
-DOMAIN,d1c37gjwa26taa.cloudfront.net
-DOMAIN,c33hcgiwev3.cloudfront.net
-DOMAIN,rhr7kgmtrq1v.cloudfront.net
 IP-CIDR,13.32.0.0/16,no-resolve
 IP-CIDR,13.33.0.0/16,no-resolve
 IP-CIDR,13.35.0.0/17,no-resolve
@@ -335,9 +311,70 @@ IP-CIDR,54.156.0.0/14,no-resolve
 IP-CIDR,54.226.0.0/15,no-resolve
 IP-CIDR,54.230.156.0/22,no-resolve
 IP-CIDR,54.93.0.0/16,no-resolve
+## >> Amazon Prime Video
+PROCESS-NAME,com.amazon.avod.thirdpartyclient
+USER-AGENT,InstantVideo.US*
+USER-AGENT,Prime%20Video*
+DOMAIN-SUFFIX,aiv-cdn.net
+DOMAIN-SUFFIX,aiv-delivery.net
+DOMAIN-SUFFIX,amazonprimevideo.cn
+DOMAIN-SUFFIX,amazonprimevideo.com.cn
+DOMAIN-SUFFIX,amazonprimevideos.com
+DOMAIN-SUFFIX,amazonvideo.cc
+DOMAIN-SUFFIX,amazonvideo.com
+DOMAIN-SUFFIX,atv-ps.amazon.com
+DOMAIN-SUFFIX,avodmp4s3ww-a.akamaihd.net
+DOMAIN-SUFFIX,fls-na.amazon.com
+DOMAIN-SUFFIX,llnwd.net
+DOMAIN-SUFFIX,media-amazon.com
+DOMAIN-SUFFIX,prime-video.com
+DOMAIN-SUFFIX,primevideo.cc
+DOMAIN-SUFFIX,primevideo.com
+DOMAIN-SUFFIX,primevideo.info
+DOMAIN-SUFFIX,primevideo.org
+DOMAIN-SUFFIX,primevideo.tv
+DOMAIN,d1v5ir2lpwr8os.cloudfront.net
+DOMAIN,d22qjgkvxw22r6.cloudfront.net
+DOMAIN,d25xi40x97liuc.cloudfront.net
+DOMAIN,d27xxe7juh1us6.cloudfront.net
+DOMAIN,dmqdd6hw24ucf.cloudfront.net
+DOMAIN-KEYWORD,avoddashs
 ## >> Audible
 DOMAIN-SUFFIX,audible.com
+## >> AWS
+DOMAIN-SUFFIX,aws
+DOMAIN-SUFFIX,acmvalidations.com
+DOMAIN-SUFFIX,acmvalidationsaws.com
+DOMAIN-SUFFIX,aesworkshops.com
+DOMAIN-SUFFIX,amazonaws-china.com
+DOMAIN-SUFFIX,amazonaws.co.uk
+DOMAIN-SUFFIX,amazonaws.com
+DOMAIN-SUFFIX,amazonaws.tv
+DOMAIN-SUFFIX,amazonworkdocs.cn
+DOMAIN-SUFFIX,amazonworkdocs.com
+DOMAIN-SUFFIX,amazonworkdocs.com.cn
+DOMAIN-SUFFIX,amplifyapp.com
+DOMAIN-SUFFIX,amplifyframework.com
+DOMAIN-SUFFIX,aws-iot-hackathon.com
+DOMAIN-SUFFIX,awsautopilot.com
+DOMAIN-SUFFIX,awsautoscaling.com
+DOMAIN-SUFFIX,awsbraket.com
+DOMAIN-SUFFIX,awscommandlineinterface.com
+DOMAIN-SUFFIX,awsedstart.com
+DOMAIN-SUFFIX,awseducate.com
+DOMAIN-SUFFIX,awseducate.net
+DOMAIN,d1b183sg0nvnuh.cloudfront.net
+DOMAIN,d1c37gjwa26taa.cloudfront.net
+DOMAIN,c33hcgiwev3.cloudfront.net
+DOMAIN,rhr7kgmtrq1v.cloudfront.net
+## >> IMDB
+DOMAIN-SUFFIX,boxofficemojo.com
+DOMAIN-SUFFIX,imdb
+DOMAIN-SUFFIX,imdb.com
+DOMAIN-SUFFIX,imdb.to
+DOMAIN-SUFFIX,media-imdb.com
 ## >> Kindle
+DOMAIN-SUFFIX,kindle
 DOMAIN-SUFFIX,kindle.cn
 DOMAIN-SUFFIX,kindle.co.jp
 DOMAIN-SUFFIX,kindle.co.uk
@@ -357,8 +394,11 @@ DOMAIN-SUFFIX,kindleoasis.org
 DOMAIN-SUFFIX,kindleoasis.us
 DOMAIN-SUFFIX,kindleoasisnews.com
 DOMAIN-SUFFIX,kindleproject.com
-## >> wholefoodsmarket
+## >> Wholefoodsmarket
+DOMAIN-SUFFIX,wfm.com
 DOMAIN-SUFFIX,wholecitiesfoundation.org
+DOMAIN-SUFFIX,wholefoods.com
+DOMAIN-SUFFIX,wholefoodsmarket.co.uk
 DOMAIN-SUFFIX,wholefoodsmarket.com
 DOMAIN-SUFFIX,wholekidsfoundation.org
 DOMAIN-SUFFIX,wholeplanetfoundation.org
@@ -1524,6 +1564,7 @@ DOMAIN-SUFFIX,cloudflaressl.com
 DOMAIN-SUFFIX,cloudflarestatus.com
 DOMAIN-SUFFIX,cloudflarestream.com
 DOMAIN-SUFFIX,cloudflaretest.com
+DOMAIN-SUFFIX,cloudflarewarp.com
 DOMAIN-SUFFIX,one.one.one
 DOMAIN-SUFFIX,one.one.one.one
 DOMAIN-SUFFIX,pages.dev
@@ -1885,6 +1926,14 @@ DOMAIN-SUFFIX,ebaykorea.com
 DOMAIN-SUFFIX,esmplus.com
 DOMAIN-SUFFIX,g9.co.kr
 DOMAIN-SUFFIX,gmarket.co.kr
+## > Embl
+DOMAIN-SUFFIX,ebi.ac.uk
+DOMAIN-SUFFIX,embl-hamburg.de
+DOMAIN-SUFFIX,embl.de
+DOMAIN-SUFFIX,embl.fr
+DOMAIN-SUFFIX,embl.it
+DOMAIN-SUFFIX,embl.org
+DOMAIN-SUFFIX,emblstatic.net
 ## > Emojipedia
 DOMAIN-SUFFIX,emojipedia.org
 DOMAIN-SUFFIX,worldemojiawards.com
@@ -2787,6 +2836,9 @@ DOMAIN-SUFFIX,scholar.google.ru
 DOMAIN-SUFFIX,scholar.google.se
 DOMAIN-SUFFIX,scholar.google.si
 DOMAIN-SUFFIX,scholar.google.sk
+## >> Kaggle
+DOMAIN-SUFFIX,kaggle.com
+DOMAIN-SUFFIX,kaggle.io
 ## >> Polymer
 DOMAIN-SUFFIX,polymer-project.org
 DOMAIN-SUFFIX,polymerproject.org
@@ -3533,12 +3585,13 @@ DOMAIN-SUFFIX,gucci.com
 DOMAIN-SUFFIX,guccimuseo.com
 DOMAIN-SUFFIX,guccitimeless.com
 DOMAIN-SUFFIX,regiongold.com
-## > Hashicorp
+## > HashiCorp
 DOMAIN-SUFFIX,consul.io
 DOMAIN-SUFFIX,hashicorp.com
 DOMAIN-SUFFIX,nomadproject.io
 DOMAIN-SUFFIX,packer.io
 DOMAIN-SUFFIX,terraform.io
+DOMAIN-SUFFIX,vagrantcloud.com
 DOMAIN-SUFFIX,vagrantup.com
 DOMAIN-SUFFIX,vaultproject.io
 ## > Heroku
@@ -3579,11 +3632,6 @@ DOMAIN-SUFFIX,weatherchannel
 DOMAIN-SUFFIX,identrust.com
 DOMAIN-SUFFIX,identrust.co.uk
 DOMAIN-SUFFIX,identrust.net
-## > IMDB
-DOMAIN-SUFFIX,boxofficemojo.com
-DOMAIN-SUFFIX,imdb.com
-DOMAIN-SUFFIX,imdb.to
-DOMAIN-SUFFIX,media-imdb.com
 ## > Imgur
 DOMAIN-SUFFIX,imgur.com
 DOMAIN-SUFFIX,imgurinc.com
@@ -4052,7 +4100,6 @@ DOMAIN-SUFFIX,lldns.net
 DOMAIN-SUFFIX,llnw-trials.com
 DOMAIN-SUFFIX,llnw.com
 DOMAIN-SUFFIX,llnw.net
-DOMAIN-SUFFIX,llnwd.net
 DOMAIN-SUFFIX,llnwi.net
 ## > Linguee
 DOMAIN-SUFFIX,linguee.com
@@ -4119,6 +4166,7 @@ DOMAIN-SUFFIX,mcdonaldsparties.co.nz
 DOMAIN-SUFFIX,mcdonaldsparties.com.au
 DOMAIN-SUFFIX,xn--qhrx81fxh2a.xn--55qx5d.hk
 ## > Mega
+PROCESS-NAME,mega.privacy.android.app
 DOMAIN-SUFFIX,mega.co.nz
 DOMAIN-SUFFIX,mega.io
 DOMAIN-SUFFIX,mega.nz
@@ -4486,6 +4534,7 @@ DOMAIN-SUFFIX,nvidia.tt.omtrdc.net
 DOMAIN-SUFFIX,1npq4.tk
 DOMAIN-SUFFIX,coastbyopera.com
 DOMAIN-SUFFIX,gamingbrowsers.com
+DOMAIN-SUFFIX,opera-api.com
 DOMAIN-SUFFIX,opera-browser.com
 DOMAIN-SUFFIX,opera-mini.net
 DOMAIN-SUFFIX,opera.com
@@ -5021,6 +5070,10 @@ DOMAIN-SUFFIX,samsungeshop.com.cn
 DOMAIN-SUFFIX,samsunggalaxyfriends.com
 DOMAIN-SUFFIX,samsungknox.com
 DOMAIN-SUFFIX,samsungqbe.com
+## > Scaleflex
+DOMAIN-SUFFIX,cloudimage.io
+DOMAIN-SUFFIX,cloudimg.io
+DOMAIN-SUFFIX,scaleflex.com
 ## > Secom
 DOMAIN-SUFFIX,secom.co.jp
 DOMAIN-SUFFIX,secomtrust.net
@@ -5496,6 +5549,9 @@ DOMAIN-SUFFIX,unitychina.cn
 DOMAIN-SUFFIX,unityedu.cn
 DOMAIN-SUFFIX,unityedu.com
 DOMAIN-SUFFIX,unityedu.com.cn
+## > V2EX
+DOMAIN-SUFFIX,v2ex.co
+DOMAIN-SUFFIX,v2ex.com
 ## > Vercel
 DOMAIN-SUFFIX,now.sh
 DOMAIN-SUFFIX,vercel-analytics.com
@@ -5929,16 +5985,26 @@ DOMAIN-SUFFIX,xingrz.me
 DOMAIN-SUFFIX,xposed.info
 ## > Yandex
 DOMAIN-SUFFIX,nic.yandex
+DOMAIN-SUFFIX,xn--d1acpjx3f.xn--p1ai
+DOMAIN-SUFFIX,ya.ru
 DOMAIN-SUFFIX,yadi.sk
+DOMAIN-SUFFIX,yandex
+DOMAIN-SUFFIX,yandex.aero
 DOMAIN-SUFFIX,yandex.az
 DOMAIN-SUFFIX,yandex.by
 DOMAIN-SUFFIX,yandex.co.il
 DOMAIN-SUFFIX,yandex.com
 DOMAIN-SUFFIX,yandex.com.am
 DOMAIN-SUFFIX,yandex.com.ge
+DOMAIN-SUFFIX,yandex.com.ru
 DOMAIN-SUFFIX,yandex.com.tr
+DOMAIN-SUFFIX,yandex.com.ua
+DOMAIN-SUFFIX,yandex.de
 DOMAIN-SUFFIX,yandex.ee
+DOMAIN-SUFFIX,yandex.eu
+DOMAIN-SUFFIX,yandex.fi
 DOMAIN-SUFFIX,yandex.fr
+DOMAIN-SUFFIX,yandex.jobs
 DOMAIN-SUFFIX,yandex.kg
 DOMAIN-SUFFIX,yandex.kz
 DOMAIN-SUFFIX,yandex.lt
@@ -6078,9 +6144,13 @@ DOMAIN-SUFFIX,69vj.com
 DOMAIN-SUFFIX,721av.com
 DOMAIN-SUFFIX,7mm.tv
 DOMAIN-SUFFIX,85tube.com
+DOMAIN-SUFFIX,8muses.com
+DOMAIN-SUFFIX,91.51rmc.com
 DOMAIN-SUFFIX,91gay.me
 DOMAIN-SUFFIX,91porn005.me
 DOMAIN-SUFFIX,920share.com
+DOMAIN-SUFFIX,a.91gay.me
+DOMAIN-SUFFIX,a.kslive.tv
 DOMAIN-SUFFIX,aavs.xyz
 DOMAIN-SUFFIX,agzy1.com
 DOMAIN-SUFFIX,aibaobei.me
@@ -6097,6 +6167,7 @@ DOMAIN-SUFFIX,avmoo.cyou
 DOMAIN-SUFFIX,avpanda.cc
 DOMAIN-SUFFIX,avsee01.tv
 DOMAIN-SUFFIX,avseesee.com
+DOMAIN-SUFFIX,aznude.com
 DOMAIN-SUFFIX,bangbros.com
 DOMAIN-SUFFIX,besthentaitube.com
 DOMAIN-SUFFIX,brazzers.com
@@ -6104,14 +6175,18 @@ DOMAIN-SUFFIX,buzzav.com
 DOMAIN-SUFFIX,caime.xyz
 DOMAIN-SUFFIX,calvappd.me
 DOMAIN-SUFFIX,cam4.com
+DOMAIN-SUFFIX,camwhores.tv
 DOMAIN-SUFFIX,cslpldyb.me
 DOMAIN-SUFFIX,dkk37.com
+DOMAIN-SUFFIX,download.91porn005.me
+DOMAIN-SUFFIX,download.i91av.org
 DOMAIN-SUFFIX,dvh30n.vip
 DOMAIN-SUFFIX,flirt4free.com
 DOMAIN-SUFFIX,follasian.com
 DOMAIN-SUFFIX,gaypad.net
 DOMAIN-SUFFIX,gouri.xyz
 DOMAIN-SUFFIX,hanime.tv
+DOMAIN-SUFFIX,hanime1.me
 DOMAIN-SUFFIX,hpjav.tv
 DOMAIN-SUFFIX,hsxhr.cc
 DOMAIN-SUFFIX,i91av.org
@@ -6120,12 +6195,14 @@ DOMAIN-SUFFIX,iijav.com
 DOMAIN-SUFFIX,immxd.com
 DOMAIN-SUFFIX,isexlove.tw
 DOMAIN-SUFFIX,isexomega.tw
+DOMAIN-SUFFIX,jable.tv
 DOMAIN-SUFFIX,japan-whores.com
 DOMAIN-SUFFIX,japanesebeauties.net
 DOMAIN-SUFFIX,jav.guru
 DOMAIN-SUFFIX,jav01.cc
 DOMAIN-SUFFIX,jav101.com
 DOMAIN-SUFFIX,jav168.cc
+DOMAIN-SUFFIX,jav321.com
 DOMAIN-SUFFIX,javcc.cc
 DOMAIN-SUFFIX,javcc.com
 DOMAIN-SUFFIX,javdoe.com
@@ -6139,6 +6216,7 @@ DOMAIN-SUFFIX,javmost.com
 DOMAIN-SUFFIX,javqd.com
 DOMAIN-SUFFIX,javynow.com
 DOMAIN-SUFFIX,jgg18.xyz
+DOMAIN-SUFFIX,jiayoulu.com
 DOMAIN-SUFFIX,jinnaju.com
 DOMAIN-SUFFIX,jjdong7.com
 DOMAIN-SUFFIX,johren.net
@@ -6155,9 +6233,11 @@ DOMAIN-SUFFIX,mdlf.xyz
 DOMAIN-SUFFIX,myavfun.com
 DOMAIN-SUFFIX,mydirtyhobby.com
 DOMAIN-SUFFIX,myfreecams.com
+DOMAIN-SUFFIX,namethatporn.com
 DOMAIN-SUFFIX,nekoxxx.com
 DOMAIN-SUFFIX,nhentai.net
 DOMAIN-SUFFIX,ohyeah1080.com
+DOMAIN-SUFFIX,onejav.com
 DOMAIN-SUFFIX,osakamotion.net
 DOMAIN-SUFFIX,p3.csgfnmdb.com
 DOMAIN-SUFFIX,papalah.com
@@ -6169,6 +6249,7 @@ DOMAIN-SUFFIX,qingse.one
 DOMAIN-SUFFIX,r18lu.com
 DOMAIN-SUFFIX,realitykings.com
 DOMAIN-SUFFIX,rule34.xxx
+DOMAIN-SUFFIX,seqingx.com
 DOMAIN-SUFFIX,seselah.com
 DOMAIN-SUFFIX,sextop1.net
 DOMAIN-SUFFIX,sexzy4.com
@@ -6191,8 +6272,10 @@ DOMAIN-SUFFIX,vjav.com
 DOMAIN-SUFFIX,watchjavonline.com
 DOMAIN-SUFFIX,wuso.me
 DOMAIN-SUFFIX,wzmyg.com
+DOMAIN-SUFFIX,x18r.com
 DOMAIN-SUFFIX,x99av.com
 DOMAIN-SUFFIX,xo104.com
+DOMAIN-SUFFIX,xtube.com
 DOMAIN-SUFFIX,youav.com
 ## >> 1pondo
 DOMAIN-SUFFIX,1pondo.tv
@@ -9764,7 +9847,6 @@ DOMAIN-SUFFIX,on.cc
 DOMAIN-SUFFIX,onapp.com
 DOMAIN-SUFFIX,onebigfluke.com
 DOMAIN-SUFFIX,onedumb.com
-DOMAIN-SUFFIX,onejav.com
 DOMAIN-SUFFIX,onion.city
 DOMAIN-SUFFIX,onlinecha.com
 DOMAIN-SUFFIX,onlineyoutube.com
@@ -11663,7 +11745,6 @@ DOMAIN-SUFFIX,xpud.org
 DOMAIN-SUFFIX,xrentdvd.com
 DOMAIN-SUFFIX,xskywalker.com
 DOMAIN-SUFFIX,xskywalker.net
-DOMAIN-SUFFIX,xtube.com
 DOMAIN-SUFFIX,xuchao.net
 DOMAIN-SUFFIX,xuchao.org
 DOMAIN-SUFFIX,xuehua.us
