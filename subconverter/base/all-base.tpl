@@ -1,14 +1,15 @@
 {% if request.target == "clash" or request.target == "clashr" %}
 
-mixed-port: {{ local.clash.mixed_port }}
-redir-port: {{ local.clash.redir_port}}
+mixed-port: {{ default(global.clash.http_port, "8888") }}
+redir-port-port: {{ default(global.clash.redir_port, "8890") }}
 #authentication:
 #  - "firefly:WJ960923"
-allow-lan: {{ local.clash.allow_lan }}
+allow-lan: {{ default(global.clash.allow_lan, "true") }}
 bind-address: '*'
 mode: rule
-log-level: {{ local.clash.log_level }}
-external-controller: {{ local.clash.api_port}}
+log-level: {{ default(global.clash.log_level, "info") }}
+ipv6: true
+external-controller: {{ default(global.clash.api_port, "9090")}}
 #external-ui: folder
 
 secret: ''
@@ -209,12 +210,17 @@ dns:
 [General]
 ipv6 = true
 loglevel = notify
+internet-test-url = https://connectivitycheck.gstatic.com/generate_204
+proxy-test-url = https://connectivitycheck.gstatic.com/generate_204
+test-timeout = 3
+socks5-listen = 8828
 http-listen = 8829
 socks5-listen = 8828
 allow-wifi-access = true
 wifi-access-http-port = 8838
 wifi-access-socks5-port = 8839
 external-controller-access = 6170@0.0.0.0:6155
+skip-proxy = 10.0.0.0/8, 127.0.0.0/8, 169.254.0.0/16, 192.0.2.0/24, 192.168.0.0/16, 198.51.100.0/24, 224.0.0.0/4, *.local, localhostlocal,::ffff:0:0:0:0/1,::ffff:128:0:0:0/1
 dns-server = system, 119.29.29.29, 223.5.5.5
 doh-server = https://9.9.9.9/dns-query, https://dns.alidns.com/dns-query, https://i.233py.com/dns-query, https://doh.pub/dns-query, https://dns.pub/dns-query, https://dns.cfiec.net/dns-query, https://dns.rubyfish.cn/dns-query, https://doh.mullvad.net/dns-query, https://doh.dns.sb/dns-query, https://dns.twnic.tw/dns-query, https://doh.opendns.com/dns-query, https://dns.233py.com/dns-query, https://public.dns.iij.jp/dns-query, https://doh.mullvad.net/dns-query
 hijack-dns = 8.8.8.8:53
@@ -223,7 +229,6 @@ tun-excluded-routes = 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12
 tun-included-routes = 192.168.1.12/32
 tls-provider = openssl
 exclude-simple-hostnames = true
-skip-proxy = 127.0.0.1, 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12, 100.64.0.0/10, localhost, *.local
 force-http-engine-hosts = 122.14.246.33, 175.102.178.52, mobile-api2011.elong.com
 internet-test-url = https://connectivitycheck.gstatic.com/generate_204
 proxy-test-url = https://connectivitycheck.gstatic.com/generate_204
@@ -419,7 +424,7 @@ wifi-access-socks5-port=8839
 interface = 0.0.0.0
 socks-interface = 0.0.0.0
 internet-test-url = https://connectivitycheck.gstatic.com/generate_204
-proxy-test-url = http://connectivitycheck.gstatic.com/generate_204
+proxy-test-url = https://connectivitycheck.gstatic.com/generate_204
 test-timeout = 5
 
 {% endif %}
