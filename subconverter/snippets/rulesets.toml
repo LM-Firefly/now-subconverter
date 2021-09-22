@@ -19,7 +19,7 @@ group = "🛑 全球拦截"
 ruleset = "rules/DivineEngine/Surge/Ruleset/Guard/Hijacking.list"
 
 [[rulesets]]
-group = ";🎥 NETFLIX"
+group = "🎥 NETFLIX"
 ruleset = "rules/DivineEngine/Surge/Ruleset/StreamingMedia/Video/Netflix.list"
 
 [[rulesets]]
@@ -77,4 +77,3 @@ ruleset = "[]GEOIP,CN"
 [[rulesets]]
 group = "🐟 漏网之鱼"
 ruleset = "[]FINAL"
-
