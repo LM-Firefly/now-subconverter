@@ -82,6 +82,7 @@ DOMAIN-SUFFIX,bbcfmt.s.llnwi.net
 DOMAIN-SUFFIX,bbci.co
 DOMAIN-SUFFIX,bbci.co.uk
 DOMAIN-SUFFIX,bbcmedia.co.uk
+DOMAIN-SUFFIX,bbcpersian.com
 DOMAIN-SUFFIX,bbcverticals.com
 DOMAIN-SUFFIX,bidi.net.uk
 DOMAIN,aod-dash-uk-live.akamaized.net
@@ -144,11 +145,6 @@ DOMAIN-SUFFIX,pluto.tv
 ## >> ShowTime
 PROCESS-NAME,com.showtime.standalone
 DOMAIN-SUFFIX,showtime.com
-## > CNBC
-DOMAIN-SUFFIX,cnbc.com
-DOMAIN-SUFFIX,cnbcfm.com
-DOMAIN-SUFFIX,nbcuni.com
-DOMAIN-SUFFIX,nbcudigitaladops.com
 ## > CNN
 DOMAIN-SUFFIX,cnn.com
 DOMAIN-SUFFIX,cnn.io
@@ -834,6 +830,38 @@ DOMAIN,d349g9zuie06uo.cloudfront.net
 USER-AGENT,Naver%20TV*
 DOMAIN-SUFFIX,naver.com
 DOMAIN-SUFFIX,smartmediarep.com
+## > NBC
+DOMAIN-SUFFIX,nbc-sports.go-vip.net
+DOMAIN-SUFFIX,nbc.co
+DOMAIN-SUFFIX,nbc.com
+DOMAIN-SUFFIX,nbcnews.com
+DOMAIN-SUFFIX,nbcsports.com
+DOMAIN-SUFFIX,nbcsports.h-cdn.com
+DOMAIN-SUFFIX,nbcuni.com
+DOMAIN-SUFFIX,s-nbcnews.com
+DOMAIN-SUFFIX,usanetwork.com
+## >> BravoTV
+DOMAIN-SUFFIX,bravotv.com
+## >> CNBC
+DOMAIN-SUFFIX,cnbc.com
+DOMAIN-SUFFIX,cnbcfm.com
+DOMAIN-SUFFIX,nbcudigitaladops.com
+## >> EL Universo
+DOMAIN-SUFFIX,eluniverso.com
+## >> E!
+DOMAIN-SUFFIX,eonline.com
+## >> MSNBC
+DOMAIN-SUFFIX,msnbc.com
+## >> Oxygen
+DOMAIN-SUFFIX,oxygen.com
+## >> PeacockTV
+DOMAIN-SUFFIX,peacocktv.com
+## >> SYFY
+DOMAIN-SUFFIX,syfy.com
+## >> Telemundo
+DOMAIN-SUFFIX,telemundo.com
+## >> Universalkids
+DOMAIN-SUFFIX,universalkids.com
 ## > Netflix
 PROCESS-NAME,com.netflix.mediaclient
 USER-AGENT,Argo*
@@ -850,6 +878,7 @@ DOMAIN-SUFFIX,nflximg.net
 DOMAIN-SUFFIX,nflxsearch.net
 DOMAIN-SUFFIX,nflxso.net
 DOMAIN-SUFFIX,nflxvideo.net
+DOMAIN-SUFFIX,us-west-2.amazonaws.com
 DOMAIN-KEYWORD,dualstack.apiproxy-device-prod-nlb-
 DOMAIN-KEYWORD,dualstack.ichnaea-web-
 ## >> DNS test
