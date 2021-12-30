@@ -1,31 +1,28 @@
 {% if request.target == "clash" or request.target == "clashr" %}
-
-mixed-port: {{ default(global.clash.http_port, "8888") }}
-redir-port-port: {{ default(global.clash.redir_port, "8890") }}
+mixed-port: {{ default(global.clash.mixed_port, "18888") }}
+redir-port: {{ default(global.clash.redir_port, "18890") }}
 #authentication:
 #  - "firefly:WJ960923"
 allow-lan: {{ default(global.clash.allow_lan, "true") }}
 bind-address: '*'
 mode: rule
 log-level: {{ default(global.clash.log_level, "info") }}
-ipv6: true
-external-controller: {{ default(global.clash.api_port, "9090")}}
+external-controller: {{ default(global.clash.api_port, "0.0.0.0:19090")}}
 #external-ui: folder
-
 secret: ''
-#interface-name: en0
+routing-mark: {{ default(global.clash.routing_mark, "16666")}}
 profile:
-  # store the `select` results in $HOME/.cache
-  # when two different configurations have groups with the same name, the selected values are shared
-  # set false if you don't want this behavior
+  store-fake-ip: true
   store-selected: true
-  # open tracing exporter API
   tracing: true
 {% if exists("request.clash.dns") %}
 {% if request.clash.dns == "tap" %}
 ipv6: true
 #interface-name: WLAN
 hosts:
+  # '*.clash.dev': 127.0.0.1
+  # '.dev': 127.0.0.1
+  # 'alpha.clash.dev': '::1'
 dns:
   enable: true
   listen: 0.0.0.0:53
@@ -35,89 +32,86 @@ dns:
 ipv6: true
 tun:
   enable: true
-  stack: system # or gvisor
+  stack: gvisor # or system
+  auto-route: true # auto set global route for Windows
+  auto-detect-interface: true # auto detect interface, conflict with `interface-name`
   dns-hijack:
     - 198.18.0.2:53 # when `fake-ip-range` is 198.18.0.1/16, should hijack 198.18.0.2:53
-  macOS-auto-route: true # auto set global route for Windows
-  macOS-auto-detect-interface: true # auto detect interface, conflict with `interface-name`
 #interface-name: WLAN
 hosts:
+  # '*.clash.dev': 127.0.0.1
+  # '.dev': 127.0.0.1
+  # 'alpha.clash.dev': '::1'
 dns:
   enable: true
 #  listen: 0.0.0.0:53
   ipv6: true
 {% endif %}
-{% if request.clash.dns == "cfa" %}
+{% if request.clash.dns == "meta-tun" %}
 ipv6: true
 tun:
   enable: true
-  stack: gvisor # or system
-#  dns-hijack:
-#    - 198.18.0.2:53 # when `fake-ip-range` is 198.18.0.1/16, should hijack 198.18.0.2:53
-#  macOS-auto-route: true # auto set global route for Windows
-#  macOS-auto-detect-interface: true # auto detect interface, conflict with `interface-name`
+  stack: gvisor #  system or gvisor
+  dns-listen: 0.0.0.0:53 # additional dns server listen on TUN
+  auto-route: true # auto set global route
 #interface-name: WLAN
 hosts:
+  # '*.clash.dev': 127.0.0.1
+  # '.dev': 127.0.0.1
+  # 'alpha.clash.dev': '::1'
 dns:
   enable: true
-  listen: 127.0.0.1:1053
   ipv6: true
+  listen: 127.0.0.1:6868
 {% endif %}
 {% else %}
 ipv6: true
+#interface-name: WLAN
 hosts:
+  # '*.clash.dev': 127.0.0.1
+  # '.dev': 127.0.0.1
+  # 'alpha.clash.dev': '::1'
 dns:
   enable: true
   listen: 127.0.0.1:1053
   ipv6: true
 {% endif %}
-  # These nameservers are used to resolve the DNS nameserver hostnames below.
-  # Specify IP addresses only
   default-nameserver:
     - 223.5.5.5
     - 119.29.29.29
   enhanced-mode: fake-ip # redir-host #fake-ip
-#  fake-ip-range: 198.18.0.1/16
+  fake-ip-range: 198.18.0.1/16
+  use-hosts: true
   fake-ip-filter:
     # === LAN ===
-    - '*.lan'
-    - '*.localdomain'
     - '*.example'
+    - '*.home.arpa'
     - '*.invalid'
+    - '*.lan'
+    - '*.local'
+    - '*.localdomain'
     - '*.localhost'
     - '*.test'
-    - '*.local'
-    - '*.home.arpa'
-    # === Linksys Wireless Router ===
-    - '*.linksys.com'
-    - '*.linksyssmartwifi.com'
+    # === Apple Software Update Service ===
+    - 'mesu.apple.com'
+    - 'swscan.apple.com'
     # === ASUS Router ===
     - '*.router.asus.com'
-    # === Apple Software Update Service ===
-    - 'swscan.apple.com'
-    - 'mesu.apple.com'
-    # === Windows 10 Connnect Detection ===
-    - '*.msftconnecttest.com'
-    - '*.msftncsi.com'
-    - 'msftconnecttest.com'
-    - 'msftncsi.com'
     # === Google ===
     - 'lens.l.google.com'
     - 'stun.l.google.com'
     ## Golang
     - 'proxy.golang.org'
+    # === Linksys Wireless Router ===
+    - '*.linksys.com'
+    - '*.linksyssmartwifi.com'
+    # === Windows 10 Connnect Detection ===
+    - '*.ipv6.microsoft.com'
+    - '*.msftconnecttest.com'
+    - '*.msftncsi.com'
+    - 'msftconnecttest.com'
+    - 'msftncsi.com'
     # === NTP Service ===
-    - 'time.*.com'
-    - 'time.*.gov'
-    - 'time.*.edu.cn'
-    - 'time.*.apple.com'
-    - 'time1.*.com'
-    - 'time2.*.com'
-    - 'time3.*.com'
-    - 'time4.*.com'
-    - 'time5.*.com'
-    - 'time6.*.com'
-    - 'time7.*.com'
     - 'ntp.*.com'
     - 'ntp1.*.com'
     - 'ntp2.*.com'
@@ -126,31 +120,78 @@ dns:
     - 'ntp5.*.com'
     - 'ntp6.*.com'
     - 'ntp7.*.com'
+    - 'time.*.apple.com'
+    - 'time.*.com'
+    - 'time.*.gov'
+    - 'time1.*.com'
+    - 'time2.*.com'
+    - 'time3.*.com'
+    - 'time4.*.com'
+    - 'time5.*.com'
+    - 'time6.*.com'
+    - 'time7.*.com'
+    - 'time.*.edu.cn'
     - '*.time.edu.cn'
     - '*.ntp.org.cn'
     - '+.pool.ntp.org'
     - 'time1.cloud.tencent.com'
     # === Game Service ===
-    ## Nintendo Switch
-    - '+.srv.nintendo.net'
-    ## Sony PlayStation
-    - '+.stun.playstation.net'
     ## Microsoft Xbox
+    - 'speedtest.cros.wr.pvp.net'
+    - '*.*.xboxlive.com'
+    - 'xbox.*.*.microsoft.com'
     - 'xbox.*.microsoft.com'
     - 'xnotify.xboxlive.com'
+    ## Nintendo Switch
+    - '*.*.*.srv.nintendo.net'
+    - '+.srv.nintendo.net'
+    ## Sony PlayStation
+    - '*.*.stun.playstation.net'
+    - '+.stun.playstation.net'
+    ## STUN Server
+    - '+.stun.*.*.*.*'
+    - '+.stun.*.*.*'
+    - '+.stun.*.*'
+    - 'stun.*.*.*'
+    - 'stun.*.*'
+    # === Music Service ===
+    ## 咪咕音乐
+    - '*.music.migu.cn'
+    - 'music.migu.cn'
+    ## 太和音乐
+    - 'music.taihe.com'
+    - 'musicapi.taihe.com'
+    ## 腾讯音乐
+    - 'songsearch.kugou.com'
+    - 'trackercdn.kugou.com'
+    - '*.kuwo.cn'
+    - 'api-jooxtt.sanook.com'
+    - 'api.joox.com'
+    - 'joox.com'
+    - 'y.qq.com'
+    - '*.y.qq.com'
+    - 'amobile.music.tc.qq.com'
+    - 'aqqmusic.tc.qq.com'
+    - 'mobileoc.music.tc.qq.com'
+    - 'streamoc.music.tc.qq.com'
+    - 'dl.stream.qqmusic.qq.com'
+    - 'isure.stream.qqmusic.qq.com'
+    ## 网易云音乐
+    - 'music.163.com'
+    - '*.music.163.com'
+    - '*.126.net'
+    ## 虾米音乐
+    - '*.xiami.com'
     # === Other ===
     ## QQ Quick Login
     - 'localhost.ptlogin2.qq.com'
     - 'localhost.sec.qq.com'
-    ## STUN Server
-    - 'stun.*.*'
-    - 'stun.*.*.*'
-    - '+.stun.*.*'
-    - '+.stun.*.*.*'
-    - '+.stun.*.*.*.*'
+    ## BiliBili P2P
+    - '*.mcdn.bilivideo.cn'
   nameserver:
     - 223.5.5.5
     - 119.29.29.29
+    - dhcp://system
     - https://dns.alidns.com/dns-query
     - https://i.233py.com/dns-query
     - https://doh.pub/dns-query
@@ -158,11 +199,11 @@ dns:
     - https://dns.cfiec.net/dns-query
     - https://dns.rubyfish.cn/dns-query
     - https://doh.mullvad.net/dns-query
+    - https://dns-unfiltered.adguard.com/dns-query
 #    - https://cdn-doh.ssnm.xyz/dns-query
 #    - tls://dns.233py.com
 #    - https://dns.233py.com/dns-query
 #    - https://dns.twnic.tw/dns-query
-#    - https://dns-unfiltered.adguard.com/dns-query
 #    - https://doh.opendns.com/dns-query
 #    - https://cloudflare-dns.com/dns-query
 #    - https://dns.google/dns-query
@@ -182,21 +223,21 @@ dns:
     - https://dns.233py.com/dns-query
     - https://public.dns.iij.jp/dns-query
     - https://doh.mullvad.net/dns-query
+    - https://dns.google/dns-query
 #    - https://doh.qis.io/dns-query
 #    - https://dns-unfiltered.adguard.com/dns-query
 #    - https://dns.quad9.net/dns-query
 #    - https://cdn-doh.ssnm.xyz/dns-query
-#    - https://dns.google/dns-query
 #    - https://cloudflare-dns.com/dns-query
 #    - tcp://1.1.1.1
 #    - https://dns.alidns.com/dns-query
 #    - https://doh.dns.sb/dns-query
-#    - https://dns.rubyfish.cn/dns-query
 #    - tls://cloudflare-dns.com:853
 #    - tls://dns.google:853
 #    - tls://dns-tls.qis.io:853
   fallback-filter:
     geoip: true # default
+    geoip-code: CN
     ipcidr: # ips in these subnets will be considered polluted
       - 0.0.0.0/32
       - 100.64.0.0/10
@@ -210,28 +251,24 @@ dns:
 [General]
 ipv6 = true
 loglevel = notify
-internet-test-url = https://connectivitycheck.gstatic.com/generate_204
-proxy-test-url = https://connectivitycheck.gstatic.com/generate_204
-test-timeout = 3
-socks5-listen = 8828
 http-listen = 8829
 socks5-listen = 8828
 allow-wifi-access = true
 wifi-access-http-port = 8838
 wifi-access-socks5-port = 8839
 external-controller-access = 6170@0.0.0.0:6155
-skip-proxy = 10.0.0.0/8, 127.0.0.0/8, 169.254.0.0/16, 192.0.2.0/24, 192.168.0.0/16, 198.51.100.0/24, 224.0.0.0/4, *.local, localhostlocal,::ffff:0:0:0:0/1,::ffff:128:0:0:0/1
 dns-server = system, 119.29.29.29, 223.5.5.5
 doh-server = https://9.9.9.9/dns-query, https://dns.alidns.com/dns-query, https://i.233py.com/dns-query, https://doh.pub/dns-query, https://dns.pub/dns-query, https://dns.cfiec.net/dns-query, https://dns.rubyfish.cn/dns-query, https://doh.mullvad.net/dns-query, https://doh.dns.sb/dns-query, https://dns.twnic.tw/dns-query, https://doh.opendns.com/dns-query, https://dns.233py.com/dns-query, https://public.dns.iij.jp/dns-query, https://doh.mullvad.net/dns-query
 hijack-dns = 8.8.8.8:53
-always-real-ip = *.lan, *.localdomain, *.example, *.invalid, *.localhost, *.test, *.local, *.home.arpa, *.linksys.com, *.linksyssmartwifi.com, *.router.asus.com, swscan.apple.com, mesu.apple.com, *.msftconnecttest.com, *.msftncsi.com, msftconnecttest.com, msftncsi.com, lens.l.google.com, stun.l.google.com, proxy.golang.org, time.*.com, time.*.gov, time.*.edu.cn, time.*.apple.com, time1.*.com, time2.*.com, time3.*.com, time4.*.com, time5.*.com, time6.*.com, time7.*.com, ntp.*.com, ntp1.*.com, ntp2.*.com, ntp3.*.com, ntp4.*.com, ntp5.*.com, ntp6.*.com, ntp7.*.com, *.time.edu.cn, *.ntp.org.cn, *.pool.ntp.org, time1.cloud.tencent.com, *.srv.nintendo.net, *.stun.playstation.net, xbox.*.microsoft.com, xnotify.xboxlive.com, localhost.ptlogin2.qq.com, localhost.sec.qq.com, stun.*.*, stun.*.*.*, *.stun.*.*, *.stun.*.*.*, *.stun.*.*.*.*
+always-real-ip = *.example, *.home.arpa, *.invalid, *.lan, *.local, *.localdomain, *.localhost, *.test, mesu.apple.com, swscan.apple.com, *.router.asus.com, lens.l.google.com, stun.l.google.com, proxy.golang.org, *.linksys.com, *.linksyssmartwifi.com, *.ipv6.microsoft.com, *.msftconnecttest.com, *.msftncsi.com, msftconnecttest.com, msftncsi.com, ntp.*.com, ntp1.*.com, ntp2.*.com, ntp3.*.com, ntp4.*.com, ntp5.*.com, ntp6.*.com, ntp7.*.com, time.*.apple.com, time.*.com, time.*.gov, time1.*.com, time2.*.com, time3.*.com, time4.*.com, time5.*.com, time6.*.com, time7.*.com, time.*.edu.cn, *.time.edu.cn, *.ntp.org.cn, +.pool.ntp.org, time1.cloud.tencent.com, speedtest.cros.wr.pvp.net, *.*.xboxlive.com, xbox.*.*.microsoft.com, xbox.*.microsoft.com, xnotify.xboxlive.com, *.*.*.srv.nintendo.net, +.srv.nintendo.net, *.*.stun.playstation.net, +.stun.playstation.net, +.stun.*.*.*.*, +.stun.*.*.*, +.stun.*.*, stun.*.*.*, stun.*.*, *.music.migu.cn, music.migu.cn, music.taihe.com, musicapi.taihe.com, songsearch.kugou.com, trackercdn.kugou.com, *.kuwo.cn, api-jooxtt.sanook.com, api.joox.com, joox.com, y.qq.com, *.y.qq.com, amobile.music.tc.qq.com, aqqmusic.tc.qq.com, mobileoc.music.tc.qq.com, streamoc.music.tc.qq.com, dl.stream.qqmusic.qq.com, isure.stream.qqmusic.qq.com, music.163.com, *.music.163.com, *.126.net, *.xiami.com, localhost.ptlogin2.qq.com, localhost.sec.qq.com
 tun-excluded-routes = 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12
 tun-included-routes = 192.168.1.12/32
 tls-provider = openssl
 exclude-simple-hostnames = true
+skip-proxy = 127.0.0.1, 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12, 100.64.0.0/10, localhost, *.local
 force-http-engine-hosts = 122.14.246.33, 175.102.178.52, mobile-api2011.elong.com
-internet-test-url = https://connectivitycheck.gstatic.com/generate_204
-proxy-test-url = https://connectivitycheck.gstatic.com/generate_204
+internet-test-url = http://connectivitycheck.gstatic.com/generate_204
+proxy-test-url = http://connectivitycheck.gstatic.com/generate_204
 test-timeout = 3
 
 [Replica]
@@ -423,8 +460,8 @@ wifi-access-http-port=8838
 wifi-access-socks5-port=8839
 interface = 0.0.0.0
 socks-interface = 0.0.0.0
-internet-test-url = https://connectivitycheck.gstatic.com/generate_204
-proxy-test-url = https://connectivitycheck.gstatic.com/generate_204
+internet-test-url = http://connectivitycheck.gstatic.com/generate_204
+proxy-test-url = http://connectivitycheck.gstatic.com/generate_204
 test-timeout = 5
 
 {% endif %}

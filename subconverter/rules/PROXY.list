@@ -349,6 +349,7 @@ DOMAIN-SUFFIX,aesworkshops.com
 DOMAIN-SUFFIX,amazonaws-china.com
 DOMAIN-SUFFIX,amazonaws.co.uk
 DOMAIN-SUFFIX,amazonaws.com
+DOMAIN-SUFFIX,amazonaws.com.cn
 DOMAIN-SUFFIX,amazonaws.tv
 DOMAIN-SUFFIX,amazonworkdocs.cn
 DOMAIN-SUFFIX,amazonworkdocs.com
@@ -359,10 +360,12 @@ DOMAIN-SUFFIX,aws-iot-hackathon.com
 DOMAIN-SUFFIX,awsautopilot.com
 DOMAIN-SUFFIX,awsautoscaling.com
 DOMAIN-SUFFIX,awsbraket.com
+DOMAIN-SUFFIX,awscloud.com
 DOMAIN-SUFFIX,awscommandlineinterface.com
 DOMAIN-SUFFIX,awsedstart.com
 DOMAIN-SUFFIX,awseducate.com
 DOMAIN-SUFFIX,awseducate.net
+DOMAIN-SUFFIX,awstrack.me
 DOMAIN,d1b183sg0nvnuh.cloudfront.net
 DOMAIN,d1c37gjwa26taa.cloudfront.net
 DOMAIN,c33hcgiwev3.cloudfront.net
@@ -402,6 +405,12 @@ DOMAIN-SUFFIX,wholefoodsmarket.co.uk
 DOMAIN-SUFFIX,wholefoodsmarket.com
 DOMAIN-SUFFIX,wholekidsfoundation.org
 DOMAIN-SUFFIX,wholeplanetfoundation.org
+## > AMD
+DOMAIN-SUFFIX,amd.com
+DOMAIN-SUFFIX,amd.com.cn
+DOMAIN-SUFFIX,amdfanstore.com
+DOMAIN-SUFFIX,ati.com
+DOMAIN-SUFFIX,radeon.com
 ## > Amplitude
 DOMAIN-SUFFIX,amplitude.com
 ## > AOL
@@ -1421,8 +1430,11 @@ DOMAIN-SUFFIX,change.org
 DOMAIN-SUFFIX,chinapower.csis.org
 ## > CHT (中华电信)
 DOMAIN-SUFFIX,cht.com.tw
+DOMAIN-SUFFIX,chtf.org.tw
 ## >> HiNet
+DOMAIN-SUFFIX,emome.net
 DOMAIN-SUFFIX,hinet.net
+DOMAIN-SUFFIX,xuite.net
 ## >> Litv
 DOMAIN-SUFFIX,litv.tv
 DOMAIN,litvfreemobile-hichannel.cdn.hinet.net
@@ -1738,11 +1750,15 @@ DOMAIN-SUFFIX,whatisairwatch.com
 DOMAIN-SUFFIX,whatisworkspaceone.com
 DOMAIN-SUFFIX,workspaceone.com
 ## > DigiCert
+DOMAIN-SUFFIX,digicert.cn
 DOMAIN-SUFFIX,digicert.com
 DOMAIN-SUFFIX,digitalcertvalidation.com
 DOMAIN-SUFFIX,freessl.com
 DOMAIN-SUFFIX,geotrust.com
 DOMAIN-SUFFIX,rapidssl.com
+DOMAIN-SUFFIX,thawte.com
+DOMAIN-SUFFIX,thawte.de
+DOMAIN-SUFFIX,thawte.fr
 ## > Discord
 DOMAIN-SUFFIX,discord.co
 DOMAIN-SUFFIX,discord.com
@@ -2309,6 +2325,7 @@ DOMAIN-SUFFIX,liverail.com
 DOMAIN-SUFFIX,liverail.tv
 DOMAIN-SUFFIX,login-account.net
 DOMAIN-SUFFIX,markzuckerberg.com
+DOMAIN-SUFFIX,meta.com
 DOMAIN-SUFFIX,midentsolutions.com
 DOMAIN-SUFFIX,mobilefacebook.com
 DOMAIN-SUFFIX,moneywithfacebook.com
@@ -2532,6 +2549,25 @@ IP-CIDR,173.252.96.0/19,no-resolve
 IP-CIDR,179.60.192.0/22,no-resolve
 IP-CIDR,185.60.216.0/22,no-resolve
 IP-CIDR,204.15.20.0/22,no-resolve
+## > Faronics
+DOMAIN-SUFFIX,clickedu.co.uk
+DOMAIN-SUFFIX,deepfreeze.co.uk
+DOMAIN-SUFFIX,deepfreeze.com
+DOMAIN-SUFFIX,deepfreeze.com.br
+DOMAIN-SUFFIX,deepfreeze.eu
+DOMAIN-SUFFIX,deepfreeze.net
+DOMAIN-SUFFIX,deepfreeze.tech
+DOMAIN-SUFFIX,faronics.ca
+DOMAIN-SUFFIX,faronics.co.uk
+DOMAIN-SUFFIX,faronics.com
+DOMAIN-SUFFIX,faronics.com.au
+DOMAIN-SUFFIX,faronics.com.sg
+DOMAIN-SUFFIX,faronics.eu
+DOMAIN-SUFFIX,faronics.kayako.com
+DOMAIN-SUFFIX,faronics.tech
+DOMAIN-SUFFIX,faronicslabs.com
+DOMAIN-SUFFIX,faronicswise.co.uk
+DOMAIN-SUFFIX,faronicswise.com
 ## > Fastly
 DOMAIN-SUFFIX,fastly.com
 DOMAIN-SUFFIX,fastly.net
@@ -2843,6 +2879,8 @@ DOMAIN-SUFFIX,scholar.google.sk
 ## >> Kaggle
 DOMAIN-SUFFIX,kaggle.com
 DOMAIN-SUFFIX,kaggle.io
+## >> Neverware
+DOMAIN-SUFFIX,neverware.com
 ## >> Polymer
 DOMAIN-SUFFIX,polymer-project.org
 DOMAIN-SUFFIX,polymerproject.org
@@ -3917,9 +3955,14 @@ DOMAIN-SUFFIX,ip-api.com
 ## > mgstage
 DOMAIN-SUFFIX,mstage.io
 ## > Jetbrains
+DOMAIN-SUFFIX,datalore.io
+DOMAIN-SUFFIX,intellij.com
+DOMAIN-SUFFIX,intellij.net
+DOMAIN-SUFFIX,intellij.org
 DOMAIN-SUFFIX,jetbrains.com
 DOMAIN-SUFFIX,jetbrains.net
-DOMAIN-SUFFIX,datalore.io
+DOMAIN-SUFFIX,jetbrains.space
+DOMAIN-SUFFIX,jetbrains.team
 DOMAIN-SUFFIX,kotlinlang.org
 ## > Jfrog
 DOMAIN-SUFFIX,jfrog.com
@@ -4194,6 +4237,7 @@ DOMAIN-SUFFIX,momoshop.com.tw
 ## >> Bugzilla
 DOMAIN-SUFFIX,bugzilla.org
 ## >> firefox
+DOMAIN-SUFFIX,extensionworkshop.com
 DOMAIN-SUFFIX,firefox.com
 DOMAIN-SUFFIX,firefox.com.cn
 DOMAIN-SUFFIX,firefoxusercontent.com
@@ -4204,6 +4248,7 @@ DOMAIN-SUFFIX,mdn.mozillademos.org
 DOMAIN-SUFFIX,media.prod.mdn.mozit.cloud
 ## >> Pocket
 DOMAIN-SUFFIX,getpocket.com
+DOMAIN-SUFFIX,pocket-image-cache.com
 ## >> SeaMonkey
 DOMAIN-SUFFIX,seamonkey-project.org
 ## >> Thunderbird
@@ -4920,12 +4965,13 @@ DOMAIN-SUFFIX,pinterest.ph
 DOMAIN-SUFFIX,pinimg.com
 DOMAIN-SUFFIX,pinterest.nl
 ## > Pixiv
+DOMAIN-SUFFIX,booth.pm
+DOMAIN-SUFFIX,fanbox.cc
+DOMAIN-SUFFIX,pixiv.co.jp
 DOMAIN-SUFFIX,pixiv.me
 DOMAIN-SUFFIX,pixiv.net
 DOMAIN-SUFFIX,pixiv.org
-DOMAIN-SUFFIX,pixiv.co.jp
 DOMAIN-SUFFIX,pximg.net
-DOMAIN-SUFFIX,fanbox.cc
 ## > Pixnet (痞客邦)
 DOMAIN-SUFFIX,pimg.tw
 DOMAIN-SUFFIX,pixanalytics.com
@@ -5133,7 +5179,10 @@ DOMAIN-SUFFIX,shopifycloud.com
 DOMAIN-SUFFIX,shopifystatus.com
 DOMAIN-SUFFIX,shopifysvc.com
 ## > Signal
+DOMAIN-SUFFIX,signal.art
 DOMAIN-SUFFIX,signal.org
+DOMAIN-SUFFIX,signalusers.org
+DOMAIN-SUFFIX,whispersystems.org
 ## > Slack
 DOMAIN-SUFFIX,slack-core.com
 DOMAIN-SUFFIX,slack-edge.com
@@ -5558,6 +5607,11 @@ DOMAIN-SUFFIX,ubereats.com
 ## > Ubuntu
 DOMAIN-SUFFIX,ubuntu.com
 DOMAIN-SUFFIX,ubuntu.net
+## > Udn
+DOMAIN-SUFFIX,udn.com
+DOMAIN-SUFFIX,udn.com.tw
+DOMAIN-SUFFIX,udndata.com
+DOMAIN-SUFFIX,udnfunlife.com
 ## > Un
 DOMAIN-SUFFIX,un.org
 ## > Unpkg
@@ -6330,6 +6384,8 @@ DOMAIN-SUFFIX,ehgt.org
 DOMAIN-SUFFIX,ehtracker.org
 DOMAIN-SUFFIX,ehwiki.org
 DOMAIN-SUFFIX,exhentai.org
+DOMAIN-SUFFIX,hath.network
+DOMAIN-SUFFIX,hentaiathome.net
 DOMAIN-SUFFIX,hentaiverse.org
 ## >> eporner
 DOMAIN-SUFFIX,eporner.com
@@ -11289,8 +11345,6 @@ DOMAIN-SUFFIX,ucam.org
 DOMAIN-SUFFIX,ucanews.com
 DOMAIN-SUFFIX,ucdc1998.org
 DOMAIN-SUFFIX,uderzo.it
-DOMAIN-SUFFIX,udn.com
-DOMAIN-SUFFIX,udn.com.tw
 DOMAIN-SUFFIX,udnbkk.com
 DOMAIN-SUFFIX,uforadio.com.tw
 DOMAIN-SUFFIX,ufreevpn.com
@@ -11609,7 +11663,6 @@ DOMAIN-SUFFIX,wheredoyougo.net
 DOMAIN-SUFFIX,whereiswerner.com
 DOMAIN-SUFFIX,wheretowatch.com
 DOMAIN-SUFFIX,whippedass.com
-DOMAIN-SUFFIX,whispersystems.org
 DOMAIN-SUFFIX,whodns.xyz
 DOMAIN-SUFFIX,whoer.net
 DOMAIN-SUFFIX,whotalking.com
@@ -11771,7 +11824,6 @@ DOMAIN-SUFFIX,xskywalker.net
 DOMAIN-SUFFIX,xuchao.net
 DOMAIN-SUFFIX,xuchao.org
 DOMAIN-SUFFIX,xuehua.us
-DOMAIN-SUFFIX,xuite.net
 DOMAIN-SUFFIX,xuzhiyong.net
 DOMAIN-SUFFIX,xvideo.cc
 DOMAIN-SUFFIX,xvideos.es

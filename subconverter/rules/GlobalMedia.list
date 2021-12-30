@@ -99,6 +99,27 @@ DOMAIN,vod-thumb-ww-live.akamaized.net
 DOMAIN,vod-thumb-ww-live.bbcfmt.s.llnwi.net
 DOMAIN-KEYWORD,bbcfmt
 DOMAIN-KEYWORD,uk-live
+## > BiliBiliHMT 哔哩哔哩 港澳台番剧
+PROCESS-NAME,com.bilibili.app.in
+PROCESS-NAME,tv.danmaku.bili
+DOMAIN-SUFFIX,acgvideo.com
+DOMAIN-SUFFIX,bilibili.com
+DOMAIN-SUFFIX,bilibili.tv
+DOMAIN-SUFFIX,p-bstarstatic.akamaized.net
+DOMAIN-SUFFIX,p.bstarstatic.com
+DOMAIN-SUFFIX,upos-bstar-mirrorakam.akamaized.net
+DOMAIN-SUFFIX,upos-bstar1-mirrorakam.akamaized.net
+DOMAIN-SUFFIX,upos-hz-mirrorakam.akamaized.net
+IP-CIDR,45.43.32.234/32,no-resolve
+IP-CIDR,119.29.29.29/32,no-resolve
+IP-CIDR,128.1.62.200/32,no-resolve
+IP-CIDR,128.1.62.201/32,no-resolve
+IP-CIDR,150.116.92.250/32,no-resolve
+IP-CIDR,164.52.76.18/32,no-resolve
+IP-CIDR,203.107.1.33/32,no-resolve
+IP-CIDR,203.107.1.34/32,no-resolve
+IP-CIDR,203.107.1.65/32,no-resolve
+IP-CIDR,203.107.1.66/32,no-resolve
 ## > BoXun
 DOMAIN-SUFFIX,boxun.com
 DOMAIN-SUFFIX,bowenpress.com
@@ -209,12 +230,15 @@ DOMAIN-SUFFIX,litix.io
 DOMAIN-SUFFIX,mobile-collector.newrelic.com
 ## > Disney
 PROCESS-NAME,com.disney.disneyplus
-USER-AGENT,Disney+*
+DOMAIN-SUFFIX,20thcenturystudios.com.au
+DOMAIN-SUFFIX,20thcenturystudios.com.br
+DOMAIN-SUFFIX,20thcenturystudios.jp
 DOMAIN-SUFFIX,adobedtm.com
 DOMAIN-SUFFIX,adventuresbydisney.com
 DOMAIN-SUFFIX,babble.com
 DOMAIN-SUFFIX,babyzone.com
 DOMAIN-SUFFIX,bam.nr-data.net
+DOMAIN-SUFFIX,beautyandthebeastmusical.co.uk
 DOMAIN-SUFFIX,braze.com
 DOMAIN-SUFFIX,cdn.optimizely.com
 DOMAIN-SUFFIX,cdn.registerdisney.go.com
@@ -228,16 +252,22 @@ DOMAIN-SUFFIX,disney-plus.net
 DOMAIN-SUFFIX,disney-portal.my.onetrust.com
 DOMAIN-SUFFIX,disney-studio.com
 DOMAIN-SUFFIX,disney-studio.net
+DOMAIN-SUFFIX,disney.asia
 DOMAIN-SUFFIX,disney.be
 DOMAIN-SUFFIX,disney.bg
 DOMAIN-SUFFIX,disney.ca
+DOMAIN-SUFFIX,disney.ch
 DOMAIN-SUFFIX,disney.co.il
+DOMAIN-SUFFIX,disney.co.jp
+DOMAIN-SUFFIX,disney.co.kr
 DOMAIN-SUFFIX,disney.co.th
 DOMAIN-SUFFIX,disney.co.uk
 DOMAIN-SUFFIX,disney.co.za
 DOMAIN-SUFFIX,disney.com
 DOMAIN-SUFFIX,disney.com.au
 DOMAIN-SUFFIX,disney.com.br
+DOMAIN-SUFFIX,disney.com.hk
+DOMAIN-SUFFIX,disney.com.tw
 DOMAIN-SUFFIX,disney.cz
 DOMAIN-SUFFIX,disney.de
 DOMAIN-SUFFIX,disney.demdex.net
@@ -259,6 +289,7 @@ DOMAIN-SUFFIX,disney.ph
 DOMAIN-SUFFIX,disney.pl
 DOMAIN-SUFFIX,disney.pt
 DOMAIN-SUFFIX,disney.ro
+DOMAIN-SUFFIX,disney.ru
 DOMAIN-SUFFIX,disney.se
 DOMAIN-SUFFIX,disney.sg
 DOMAIN-SUFFIX,disneyadsales.com
@@ -272,6 +303,8 @@ DOMAIN-SUFFIX,disneycruisebrasil.com
 DOMAIN-SUFFIX,disneyenconcert.com
 DOMAIN-SUFFIX,disneyiejobs.com
 DOMAIN-SUFFIX,disneyinflight.com
+DOMAIN-SUFFIX,disneyinternational.com
+DOMAIN-SUFFIX,disneyinternationalhd.com
 DOMAIN-SUFFIX,disneyjunior.com
 DOMAIN-SUFFIX,disneyjuniortreataday.com
 DOMAIN-SUFFIX,disneylatino.com
@@ -285,6 +318,7 @@ DOMAIN-SUFFIX,disneymagicmoments.gen.tr
 DOMAIN-SUFFIX,disneymagicmoments.gr
 DOMAIN-SUFFIX,disneymagicmoments.it
 DOMAIN-SUFFIX,disneymagicmoments.pl
+DOMAIN-SUFFIX,disneymagicmomentsme.com
 DOMAIN-SUFFIX,disneyme.com
 DOMAIN-SUFFIX,disneymeetingsandevents.com
 DOMAIN-SUFFIX,disneymovieinsiders.com
@@ -294,11 +328,13 @@ DOMAIN-SUFFIX,disneynow.com
 DOMAIN-SUFFIX,disneypeoplesurveys.com
 DOMAIN-SUFFIX,disneyplus.bn5x.net
 DOMAIN-SUFFIX,disneyplus.com
+DOMAIN-SUFFIX,disneyplus.com.ssl.sc.omtrdc.net
 DOMAIN-SUFFIX,disneyredirects.com
 DOMAIN-SUFFIX,disneysrivieraresort.com
 DOMAIN-SUFFIX,disneystore.com
 DOMAIN-SUFFIX,disneystreaming.com
 DOMAIN-SUFFIX,disneysubscription.com
+DOMAIN-SUFFIX,disneytickets.co.uk
 DOMAIN-SUFFIX,disneyturkiye.com.tr
 DOMAIN-SUFFIX,disneytvajobs.com
 DOMAIN-SUFFIX,disneyworld-go.com
@@ -309,13 +345,17 @@ DOMAIN-SUFFIX,go.com
 DOMAIN-SUFFIX,js-agent.newrelic.com
 DOMAIN-SUFFIX,mickey.tv
 DOMAIN-SUFFIX,moviesanywhere.com
+DOMAIN-SUFFIX,nomadlandmovie.ch
 DOMAIN-SUFFIX,playmation.com
 DOMAIN-SUFFIX,shopdisney.com
 DOMAIN-SUFFIX,shops-disney.com
 DOMAIN-SUFFIX,sorcerersarena.com
 DOMAIN-SUFFIX,spaindisney.com
+DOMAIN-SUFFIX,star-brasil.com
+DOMAIN-SUFFIX,star-latam.com
 DOMAIN-SUFFIX,starwars.com
 DOMAIN-SUFFIX,starwarsgalacticstarcruiser.com
+DOMAIN-SUFFIX,starwarskids.com
 DOMAIN-SUFFIX,streamingdisney.net
 DOMAIN-SUFFIX,thestationbymaker.com
 DOMAIN-SUFFIX,thisispolaris.com
@@ -751,7 +791,26 @@ DOMAIN-SUFFIX,5itv.tv
 DOMAIN-SUFFIX,ocnttv.com
 ## > iQIYI 国际站
 PROCESS-NAME,com.iqiyi.i18n
+PROCESS-NAME,com.iqiyi.i18n.tv
 DOMAIN-SUFFIX,iq.com
+DOMAIN-SUFFIX,inter.iqiyi.com
+DOMAIN-SUFFIX,intl-rcd.iqiyi.com
+DOMAIN-SUFFIX,intl-subscription.iqiyi.com
+DOMAIN-SUFFIX,intl.iqiyi.com
+IP-CIDR,23.40.242.10/32,no-resolve
+IP-CIDR,23.59.252.0/24,no-resolve
+IP-CIDR,23.200.145.146/32,no-resolve
+IP-CIDR,23.210.215.186/32,no-resolve
+IP-CIDR,23.211.15.0/24,no-resolve
+IP-CIDR,23.219.172.0/24,no-resolve
+IP-CIDR,104.85.165.17/32,no-resolve
+IP-CIDR,110.238.107.47/32,no-resolve
+IP-CIDR,118.26.32.162/32,no-resolve
+IP-CIDR,159.138.102.146/32,no-resolve
+IP-CIDR,184.51.102.0/24,no-resolve
+IP-CIDR,203.74.95.130/28,no-resolve
+IP-CIDR,203.80.97.203/32,no-resolve
+IP-CIDR,210.71.227.202/32,no-resolve
 ## > iTalkBB
 PROCESS-NAME,com.italkbbtv.phone
 DOMAIN-SUFFIX,api.tv.colnv.com
@@ -773,6 +832,9 @@ DOMAIN-SUFFIX,japronx.vip
 DOMAIN-KEYWORD,japonx
 DOMAIN-KEYWORD,japronx
 ## > JOOX
+USER-AGENT,WeMusic*
+USER-AGENT,JOOX*
+PROCESS-NAME,com.tencent.ibg.joox
 DOMAIN-SUFFIX,joox.com
 DOMAIN-KEYWORD,jooxweb-api
 ## > Kakao

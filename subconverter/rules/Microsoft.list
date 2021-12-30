@@ -53,6 +53,7 @@ DOMAIN-SUFFIX,gotcosmos.com
 DOMAIN-SUFFIX,microsofteca.com
 DOMAIN-SUFFIX,microsoftiotcentral.com
 DOMAIN-SUFFIX,serverlesslibrary.net
+DOMAIN-SUFFIX,signalr.net
 DOMAIN-SUFFIX,tryfunctions.com
 DOMAIN-SUFFIX,windowsazure.cn
 DOMAIN-SUFFIX,windowsazure.com
@@ -141,6 +142,7 @@ DOMAIN-SUFFIX,botframework.com
 DOMAIN-SUFFIX,codethemicrobit.com
 DOMAIN-SUFFIX,devopsassessment.net
 DOMAIN-SUFFIX,dot.net
+DOMAIN-SUFFIX,exp-tas.com
 DOMAIN-SUFFIX,gamesstack.com
 DOMAIN-SUFFIX,graphengine.io
 DOMAIN-SUFFIX,insiderdevtour.com
@@ -251,6 +253,9 @@ DOMAIN-SUFFIX,visualstudio.com
 DOMAIN-SUFFIX,visualstudio.eu
 DOMAIN-SUFFIX,visualstudio.net
 DOMAIN-SUFFIX,vsassets.io
+DOMAIN-SUFFIX,vscode-unpkg.net
+DOMAIN-SUFFIX,vscode-webview.net
+DOMAIN-SUFFIX,vscode.dev
 ## >> WindowsLive
 DOMAIN-SUFFIX,live.cn
 DOMAIN-SUFFIX,live.com.akadns.net
