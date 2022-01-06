@@ -13,7 +13,6 @@
 (BE|Belgium|比利时),🇧🇪
 (保加利亚|Bulgaria),🇧🇬
 (BR|Brazil|Paulo|巴西|圣保罗),🇧🇷
-(Canada|Montreal|Vancouver|加拿大|加(?!州|坡).*(?!▷|回|转)|蒙特利尔|温哥华|楓葉|枫叶|CA),🇨🇦
 (Switzerland|Zurich|瑞士|苏黎世),🇨🇭
 (智利|Chile),🇨🇱
 (Colombia|哥伦比亚),🇨🇴
@@ -77,6 +76,7 @@
 (乌拉圭|Uruguay),🇺🇾
 (VN|Vietnam|越南),🇻🇳
 (ZA|Africa|南非),🇿🇦
+(?i:CA|Canada|Toronto|Montreal|Vancouver|加拿大|加(?!州|坡).*(?!▷|回|转)|蒙特利尔|温哥华|楓葉|枫叶),🇨🇦
 (?i:UK|England|United.*?Kingdom|London|英.*(?!▷|回|转)|[^-]英|伦敦),🇬🇧
 (?i:JP|Japan|Tokyo|Osaka|Saitama|日.*(?!▷|回|转)|东京|大阪|埼玉|沪日|穗日|川日|中日|泉日|杭日|[^-]日),🇯🇵
 (?i:KR|Korea|KOR|首尔|韩|韓),🇰🇷

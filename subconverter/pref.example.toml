@@ -135,7 +135,7 @@ clash_use_new_field_name = true
 #         key: value           - {name: name2, key: value}
 #       - name: name2
 #         key: value
-clash_proxies_style = "flow"
+clash_proxies_style = "block"
 
 [[node_pref.rename_node]]
 match = '\(?((x|X)?(\d+)(\.?\d+)?)((\s?倍率?)|(x|X))\)?'
