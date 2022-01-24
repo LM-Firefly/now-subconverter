@@ -19,16 +19,12 @@ profile:
 {% if request.clash.dns == "tap" %}
 ipv6: true
 #interface-name: WLAN
-hosts:
-  # '*.clash.dev': 127.0.0.1
-  # '.dev': 127.0.0.1
-  # 'alpha.clash.dev': '::1'
 dns:
   enable: true
   listen: 0.0.0.0:53
   ipv6: true
 {% endif %}
-{% if request.clash.dns == "tun" %}
+{% if request.clash.dns == "win-tun" %}
 ipv6: true
 tun:
   enable: true
@@ -38,13 +34,23 @@ tun:
   dns-hijack:
     - 22.0.0.2:53 # when `fake-ip-range` is 198.18.0.1/16, should hijack 198.18.0.2:53
 #interface-name: WLAN
-hosts:
-  # '*.clash.dev': 127.0.0.1
-  # '.dev': 127.0.0.1
-  # 'alpha.clash.dev': '::1'
 dns:
   enable: true
 #  listen: 0.0.0.0:53
+  ipv6: true
+{% endif %}
+{% if request.clash.dns == "linux-tun" %}
+ipv6: true
+tun:
+  enable: true
+  stack: system # or gvisor
+#  auto-detect-interface: true # auto detect interface, conflict with `interface-name`
+  dns-hijack:
+    - 1.0.0.1:53 # Do not modifly this line
+#interface-name: WLAN
+dns:
+  enable: true
+  listen: 127.0.0.1:1053
   ipv6: true
 {% endif %}
 {% if request.clash.dns == "meta-tun" %}
@@ -55,10 +61,6 @@ tun:
   dns-listen: 0.0.0.0:53 # additional dns server listen on TUN
   auto-route: true # auto set global route
 #interface-name: WLAN
-hosts:
-  # '*.clash.dev': 127.0.0.1
-  # '.dev': 127.0.0.1
-  # 'alpha.clash.dev': '::1'
 dns:
   enable: true
   ipv6: true
@@ -67,10 +69,6 @@ dns:
 {% else %}
 ipv6: true
 #interface-name: WLAN
-hosts:
-  # '*.clash.dev': 127.0.0.1
-  # '.dev': 127.0.0.1
-  # 'alpha.clash.dev': '::1'
 dns:
   enable: true
   listen: 127.0.0.1:1053
@@ -81,7 +79,6 @@ dns:
     - 119.29.29.29
   enhanced-mode: fake-ip # redir-host #fake-ip
   fake-ip-range: 22.0.0.0/8
-  use-hosts: true
   fake-ip-filter:
     # === LAN ===
     - '*.example'
@@ -267,8 +264,8 @@ tls-provider = openssl
 exclude-simple-hostnames = true
 skip-proxy = 127.0.0.1, 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12, 100.64.0.0/10, localhost, *.local
 force-http-engine-hosts = 122.14.246.33, 175.102.178.52, mobile-api2011.elong.com
-internet-test-url = http://connectivitycheck.gstatic.com/generate_204
-proxy-test-url = http://connectivitycheck.gstatic.com/generate_204
+internet-test-url = http://cp.cloudflare.com/generate_204
+proxy-test-url = http://cp.cloudflare.com/generate_204
 test-timeout = 3
 
 [Replica]
@@ -460,8 +457,8 @@ wifi-access-http-port=8838
 wifi-access-socks5-port=8839
 interface = 0.0.0.0
 socks-interface = 0.0.0.0
-internet-test-url = http://connectivitycheck.gstatic.com/generate_204
-proxy-test-url = http://connectivitycheck.gstatic.com/generate_204
+internet-test-url = http://cp.cloudflare.com/generate_204
+proxy-test-url = http://cp.cloudflare.com/generate_204
 test-timeout = 5
 
 {% endif %}
