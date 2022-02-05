@@ -13,5 +13,9 @@
         "includeFiles": ["subconverter/**"]
       }
     }
+  ],
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/(.*)", "dest": "subconverter/subconverter.exe" }
   ]
 }
