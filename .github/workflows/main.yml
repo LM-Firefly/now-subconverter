@@ -31,20 +31,29 @@ on:
     inputs:
       message:
         description: 'commit message'
-        required: false
+        required: true
         default: 'Update subconverter'
       branch:
-        description: 'update subconverter from where?(action/build/release)'
-        required: false
+        description: 'update subconverter from where?'
+        required: true
         default: 'action'
+        type: choice
+        options:
+          - action
+          - build
+          - release
       tag:
         description: 'specific version tag if branch is "release"'
         required: false
         default: 'latest'
       modify_method:
         description: 'modify configuration file by sed or /files'
-        required: false
+        required: true
         default: 'files'
+        type: choice
+        options:
+          - sed
+          - files
 
 concurrency:
   group: subconverter
