@@ -10,7 +10,6 @@
 (保加利亚|Bulgaria),🇧🇬
 (北马其顿|Macedonia),🇲🇰
 (波黑共和国|波士尼亚与赫塞哥维纳|Bosnia|Herzegovina),🇧🇦
-(格鲁吉亚|Georgia),🇪
 (格鲁吉亚|Georgia),🇬🇪
 (哈萨克斯坦|Kazakhstan),🇰🇿
 (吉尔吉斯斯坦|Kyrgyzstan),🇰🇬
