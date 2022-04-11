@@ -18,14 +18,6 @@ exclude_remarks = ["(到期|剩余流量|时间|官网|产品|先购买套餐|�
 udp_flag = true
 
 [[node_pref.rename_node]]
-match = "(中转)([0-9][0-9][0-9]|[0-9][0-9][0-9][0-9])\|"
-replace = ""
-
-[[node_pref.rename_node]]
-match = "^V[0-9]-"
-replace = ""
-
-[[node_pref.rename_node]]
 match = "(解锁|)(\|)(x.*)(\|V2ray)"
 replace = "$[$3]"
 
@@ -36,6 +28,130 @@ replace = "$1$4$2"
 [[node_pref.rename_node]]
 match = "^CordCloud - "
 replace = ""
+
+[[node_pref.rename_node]]
+match = "(.*) (x.*[0-9]) (.*) (中转|直连|80端口)"
+replace = "$1 $3[$2]"
+
+[[node_pref.rename_node]]
+match = "(.*) (x.*[0-9]) (..)(中转|直连|80端口)"
+replace = "$1 $3[$2]"
+
+[[node_pref.rename_node]]
+match = "(V[0-9]-)(IEPL专线 |)(.*)( | \| )([0-9].*)(x$)"
+replace = "$3[x$5]"
+
+[[node_pref.rename_node]]
+match = "(V[0-9]-)(IEPL专线 |)(.*)( )([0-9].*)(x) (原生IP)"
+replace = "$3[M][x$5]"
+
+[[node_pref.rename_node]]
+match = "(.*)([0-9].*[0-9])(解锁|原生)(\|[\w].*[0-9])"
+replace = "$1$2[M]"
+
+[[node_pref.rename_node]]
+match = "(.*)(\b[0-9][0-9]\b)(解锁|原生)"
+replace = "$1$2[M]"
+
+[[node_pref.rename_node]]
+match = "(.*)([0-9].*[0-9])(标准|)(\|[\w].*[0-9])"
+replace = "$1$2"
+
+[[node_pref.rename_node]]
+match = "(.*)(\[)(倍率:)(.*[0-9])(\])"
+replace = "$1[x$4]"
+
+[[node_pref.rename_node]]
+match = "(\[x.*[0-9]\])(.*)"
+replace = "$2$1"
+
+[[node_pref.rename_node]]
+match = "(.*)( )(.*[0-9])(倍率)"
+replace = "$1[x$3]"
+
+[[node_pref.rename_node]]
+match = "((❖CN[0-9]❖)|^)(⓪|❶|❷|❸|❻)(TJ\.|gR\.|V2\.|H2\.|SS\.)"
+replace = ""
+
+;[[node_pref.rename_node]]
+;match = "^(.*)(HK(?!(B|T|G)))([\u4e00-\u9fa5])"
+;replace = "香港 $3"
+
+[[node_pref.rename_node]]
+match = "^(.*)(HK(?!B|G|T))([\u4e00-\u9fa5].*)"
+replace = "香港 $3"
+
+[[node_pref.rename_node]]
+match = "^(HKBN)(.*)"
+replace = "香港HKBN $2"
+
+[[node_pref.rename_node]]
+match = "^(HKG)(.*)"
+replace = "香港HKG $2"
+
+[[node_pref.rename_node]]
+match = "^(HKT)(.*)"
+replace = "香港HKT $2"
+
+[[node_pref.rename_node]]
+match = "^(HGC)(.*)"
+replace = "香港HGC $2"
+
+[[node_pref.rename_node]]
+match = "^(WTT)(.*)"
+replace = "香港WTT $2"
+
+[[node_pref.rename_node]]
+match = "^(US)(.*)"
+replace = "美国 $2"
+
+[[node_pref.rename_node]]
+match = "^(JP)(.*)"
+replace = "日本 $2"
+
+[[node_pref.rename_node]]
+match = "^(TW)(.*)"
+replace = "台湾 $2"
+
+[[node_pref.rename_node]]
+match = "^(SG)(.*)"
+replace = "新加坡 $2"
+
+[[node_pref.rename_node]]
+match = "^(RU)(.*)"
+replace = "俄罗斯 $2"
+
+[[node_pref.rename_node]]
+match = "^(TR)(.*)"
+replace = "土耳其 $2"
+
+[[node_pref.rename_node]]
+match = "^(UK)(.*)"
+replace = "英国 $2"
+
+[[node_pref.rename_node]]
+match = "^(KR)(.*)"
+replace = "韩国 $2"
+
+[[node_pref.rename_node]]
+match = "^(FR)(.*)"
+replace = "法国 $2"
+
+[[node_pref.rename_node]]
+match = "^(CA)(.*)"
+replace = "加拿大 $2"
+
+[[node_pref.rename_node]]
+match = "^(CN)(.*)"
+replace = "中国 $2"
+
+[[node_pref.rename_node]]
+match = "^(RO)(.*)"
+replace = "罗马尼亚 $2"
+
+[[node_pref.rename_node]]
+match = "^(BR)(.*)"
+replace = "巴西 $2"
 
 [[node_pref.rename_node]]
 match = "商宽"
@@ -54,222 +170,6 @@ match = "联通"
 replace = "CU"
 
 [[node_pref.rename_node]]
-match = "上海"
-replace = "沪"
-
-[[node_pref.rename_node]]
-match = "中国"
-replace = "中"
-
-[[node_pref.rename_node]]
-match = "云南"
-replace = "云"
-
-[[node_pref.rename_node]]
-match = "佛山"
-replace = "禅"
-
-[[node_pref.rename_node]]
-match = "俄罗斯"
-replace = "俄"
-
-[[node_pref.rename_node]]
-match = "加拿大"
-replace = "加"
-
-[[node_pref.rename_node]]
-match = "北京"
-replace = "京"
-
-[[node_pref.rename_node]]
-match = "南京"
-replace = "宁"
-
-[[node_pref.rename_node]]
-match = "南阳"
-replace = "宛"
-
-[[node_pref.rename_node]]
-match = "台湾"
-replace = "台"
-
-[[node_pref.rename_node]]
-match = "四川"
-replace = "川"
-
-[[node_pref.rename_node]]
-match = "土耳其"
-replace = "土"
-
-[[node_pref.rename_node]]
-match = "天津"
-replace = "津"
-
-[[node_pref.rename_node]]
-match = "宁波"
-replace = "甬"
-
-[[node_pref.rename_node]]
-match = "安徽"
-replace = "皖"
-
-[[node_pref.rename_node]]
-match = "新广东"
-replace = "粤"
-
-[[node_pref.rename_node]]
-match = "广东"
-replace = "粤"
-
-[[node_pref.rename_node]]
-match = "广州"
-replace = "穗"
-
-[[node_pref.rename_node]]
-match = "徐州"
-replace = "徐"
-
-[[node_pref.rename_node]]
-match = "德国"
-replace = "德"
-
-[[node_pref.rename_node]]
-match = "意大利"
-replace = "意"
-
-[[node_pref.rename_node]]
-match = "成都"
-replace = "蓉"
-
-[[node_pref.rename_node]]
-match = "新加坡"
-replace = "新"
-
-[[node_pref.rename_node]]
-match = "日本"
-replace = "日"
-
-[[node_pref.rename_node]]
-match = "杭州"
-replace = "杭"
-
-[[node_pref.rename_node]]
-match = "武汉"
-replace = "汉"
-
-[[node_pref.rename_node]]
-match = "汕头"
-replace = "汕"
-
-[[node_pref.rename_node]]
-match = "江苏"
-replace = "苏"
-
-[[node_pref.rename_node]]
-match = "沈阳"
-replace = "沈"
-
-[[node_pref.rename_node]]
-match = "法国"
-replace = "法"
-
-[[node_pref.rename_node]]
-match = "泰国"
-replace = "泰"
-
-[[node_pref.rename_node]]
-match = "浙江"
-replace = "浙"
-
-[[node_pref.rename_node]]
-match = "海南"
-replace = "琼"
-
-[[node_pref.rename_node]]
-match = "深圳"
-replace = "深"
-
-[[node_pref.rename_node]]
-match = "湖北"
-replace = "鄂"
-
-[[node_pref.rename_node]]
-match = "湖南"
-replace = "湘"
-
-[[node_pref.rename_node]]
-match = "长沙"
-replace = "长"
-
-[[node_pref.rename_node]]
-match = "澳门"
-replace = "澳"
-
-[[node_pref.rename_node]]
-match = "珠海"
-replace = "珠"
-
-[[node_pref.rename_node]]
-match = "瑞士"
-replace = "瑞"
-
-[[node_pref.rename_node]]
-match = "福建"
-replace = "闽"
-
-[[node_pref.rename_node]]
-match = "美国"
-replace = "美"
-
-[[node_pref.rename_node]]
-match = "芬兰"
-replace = "芬"
-
-[[node_pref.rename_node]]
-match = "英国"
-replace = "英"
-
-[[node_pref.rename_node]]
-match = "菲律宾"
-replace = "菲"
-
-[[node_pref.rename_node]]
-match = "许昌"
-replace = "许"
-
-[[node_pref.rename_node]]
-match = "贵州"
-replace = "贵"
-
-[[node_pref.rename_node]]
-match = "贵阳"
-replace = "筑"
-
-[[node_pref.rename_node]]
-match = "越南"
-replace = "越"
-
-[[node_pref.rename_node]]
-match = "镇江"
-replace = "镇"
-
-[[node_pref.rename_node]]
-match = "青岛"
-replace = "青"
-
-[[node_pref.rename_node]]
-match = "青海"
-replace = "青"
-
-[[node_pref.rename_node]]
-match = "韩国"
-replace = "韩"
-
-[[node_pref.rename_node]]
-match = "香港"
-replace = "港"
-
-[[node_pref.rename_node]]
 match = "深港专线"
 replace = "深港"
 
@@ -280,118 +180,6 @@ replace = "▷"
 [[node_pref.rename_node]]
 match = "[0-9]组"
 replace = ""
-
-[[node_pref.rename_node]]
-match = "(.*)(\[)(倍率:)(.*[0-9])(\])"
-replace = "$1[x$4]"
-
-[[node_pref.rename_node]]
-match = "(\[x.*[0-9]\])(.*)"
-replace = "$2$1"
-
-[[node_pref.rename_node]]
-match = "(.*)( )([0-9].*)(倍率)"
-replace = "$1[x$3]"
-
-[[node_pref.rename_node]]
-match = "((❖CN[0-9]❖)|^)(⓪|❶|❷|❸|❻)(TJ\.|gR\.|V2\.|H2\.|SS\.)"
-replace = ""
-
-;[[node_pref.rename_node]]
-;match = "^(.*)(HK(?!(B|T|G)))([\u4e00-\u9fa5])"
-;replace = "港-$3"
-
-[[node_pref.rename_node]]
-match = "(.*)(x.*)(...)(中转|直连|80端口)"
-replace = "$1-$3[$2]"
-
-[[node_pref.rename_node]]
-match = "(.*)(x.*)(...)(中转|直连|80端口)(.*)(本土)"
-replace = "$1-$3[M][$2]"
-
-[[node_pref.rename_node]]
-match = "(.*)(..)(-.*)(\[x.*\])( 本土)"
-replace = "$1$2$3[M]$4"
-
-[[node_pref.rename_node]]
-match = "(.*)(x.*)( .* )(本土)"
-replace = "$1-$3[M][$2]"
-
-[[node_pref.rename_node]]
-match = "^(.*)(HK(?!B|G|T))([\u4e00-\u9fa5].*)"
-replace = "港-$3"
-
-[[node_pref.rename_node]]
-match = "^(HKBN)(.*)"
-replace = "港HKBN-$2"
-
-[[node_pref.rename_node]]
-match = "^(HKG)(.*)"
-replace = "港HKG-$2"
-
-[[node_pref.rename_node]]
-match = "^(HKT)(.*)"
-replace = "港HKT-$2"
-
-[[node_pref.rename_node]]
-match = "^(HGC)(.*)"
-replace = "港HGC-$2"
-
-[[node_pref.rename_node]]
-match = "^(WTT)(.*)"
-replace = "港WTT-$2"
-
-[[node_pref.rename_node]]
-match = "^(US)(.*)"
-replace = "美-$2"
-
-[[node_pref.rename_node]]
-match = "^(JP)(.*)"
-replace = "日-$2"
-
-[[node_pref.rename_node]]
-match = "^(TW)(.*)"
-replace = "台-$2"
-
-[[node_pref.rename_node]]
-match = "^(SG)(.*)"
-replace = "新-$2"
-
-[[node_pref.rename_node]]
-match = "^(RU)(.*)"
-replace = "俄-$2"
-
-[[node_pref.rename_node]]
-match = "^(TR)(.*)"
-replace = "土-$2"
-
-[[node_pref.rename_node]]
-match = "^(UK)(.*)"
-replace = "英-$2"
-
-[[node_pref.rename_node]]
-match = "^(KR)(.*)"
-replace = "韩-$2"
-
-[[node_pref.rename_node]]
-match = "^(FR)(.*)"
-replace = "法-$2"
-
-[[node_pref.rename_node]]
-match = "^(CA)(.*)"
-replace = "加-$2"
-
-[[node_pref.rename_node]]
-match = "^(CN)(.*)"
-replace = "中-$2"
-
-[[node_pref.rename_node]]
-match = "^(RO)(.*)"
-replace = "罗马尼亚-$2"
-
-[[node_pref.rename_node]]
-match = "^(BR)(.*)"
-replace = "巴西-$2"
 
 [[node_pref.rename_node]]
 match = "(--)"
@@ -410,12 +198,8 @@ match = "\[M\].*\[M\]"
 replace = "[M]"
 
 [[node_pref.rename_node]]
-match = "\[CM\]|\[CU\]|\[BT\/PT专用\]|\[荐\]|\[Beta\]|\[移动\]|\[联通\]|\[综合\]|\[备用\]|\[阿里云\]|\[测试\]|\[v6\]|高速|100m限速|CDN加速"
+match = "\[CM\]|\[CU\]|\[BT\/PT专用\]|\[荐\]|\[Beta\]|\[移动\]|\[联通\]|\[综合\]|\[备用\]|\[阿里云\]|\[测试\]|\[v6\]|高速|100m限速|CDN加速|Game|PPCW|Sakura"
 replace = ""
-
-[[node_pref.rename_node]]
-match = "(.*)([0-9][0-9])"
-replace = "$1-$2"
 
 [[node_pref.rename_node]]
 match = "\[0\.2\]"
@@ -470,19 +254,7 @@ replace = "[x10]"
 ;replace = "[x1]"
 
 [[node_pref.rename_node]]
-match = " "
-replace = ""
-
-[[node_pref.rename_node]]
 match = "\[\]"
-replace = ""
-
-[[node_pref.rename_node]]
-match = "[ ]"
-replace = ""
-
-[[node_pref.rename_node]]
-match = "( )"
 replace = ""
 
 [emojis]
@@ -498,60 +270,152 @@ match = "(NetEaseMusic|网易云音乐|网易云解锁)"
 emoji = "🎶"
 
 [[emojis.emoji]]
-match = "(Ascension|阿森松)"
-emoji = "🇦🇨"
-
-[[emojis.emoji]]
-match = "(UAE|Dubai|阿联酋|迪拜)"
-emoji = "🇦🇪"
-
-[[emojis.emoji]]
 match = "(阿尔巴尼亚|Albania)"
 emoji = "🇦🇱"
-
-[[emojis.emoji]]
-match = "(AR|阿根廷|Argentina)"
-emoji = "🇦🇷"
-
-[[emojis.emoji]]
-match = "(Austria|Vienna|奥地利|维也纳)"
-emoji = "🇦🇹"
-
-[[emojis.emoji]]
-match = "(AU|Australia|Sydney|澳大利亚|澳洲|悉尼)"
-emoji = "🇦🇺"
 
 [[emojis.emoji]]
 match = "(阿塞拜疆|Azerbaijan)"
 emoji = "🇦🇿"
 
 [[emojis.emoji]]
-match = "(波黑共和国|波士尼亚与赫塞哥维纳|Bosnia|Herzegovina)"
-emoji = "🇧🇦"
+match = "(埃及|Egypt)"
+emoji = "🇪🇬"
 
 [[emojis.emoji]]
-match = "(BE|Belgium|比利时)"
-emoji = "🇧🇪"
+match = "(爱沙尼亚|Estonia)"
+emoji = "🇪🇪"
+
+[[emojis.emoji]]
+match = "(巴拿马|Panama)"
+emoji = "🇵🇦"
 
 [[emojis.emoji]]
 match = "(保加利亚|Bulgaria)"
 emoji = "🇧🇬"
 
 [[emojis.emoji]]
-match = "(BR|Brazil|Paulo|巴西|圣保罗)"
-emoji = "🇧🇷"
+match = "(北马其顿|Macedonia)"
+emoji = "🇲🇰"
 
 [[emojis.emoji]]
-match = "(Canada|Montreal|Vancouver|加拿大|加(?!州|坡).*(?!▷|回|转)|蒙特利尔|温哥华|楓葉|枫叶|CA)"
-emoji = "🇨🇦"
+match = "(波黑共和国|波士尼亚与赫塞哥维纳|Bosnia|Herzegovina)"
+emoji = "🇧🇦"
 
 [[emojis.emoji]]
-match = "(Switzerland|Zurich|瑞士|苏黎世)"
-emoji = "🇨🇭"
+match = "(格鲁吉亚|Georgia)"
+emoji = "🇬🇪"
+
+[[emojis.emoji]]
+match = "(哈萨克斯坦|Kazakhstan)"
+emoji = "🇰🇿"
+
+[[emojis.emoji]]
+match = "(吉尔吉斯斯坦|Kyrgyzstan)"
+emoji = "🇰🇬"
+
+[[emojis.emoji]]
+match = "(柬埔寨|Cambodia)"
+emoji = "🇰🇭"
+
+[[emojis.emoji]]
+match = "(克罗地亚|Croatia)"
+emoji = "🇭🇷"
+
+[[emojis.emoji]]
+match = "(肯尼亚|Kenya)"
+emoji = "🇰🇪"
+
+[[emojis.emoji]]
+match = "(拉脱维亚|Latvia)"
+emoji = "🇱🇻"
+
+[[emojis.emoji]]
+match = "(立陶宛|Lietuvos)"
+emoji = "🇱🇹"
+
+[[emojis.emoji]]
+match = "(卢森堡|Luxemburg|Luxembourg)"
+emoji = "🇱🇺"
+
+[[emojis.emoji]]
+match = "(蒙古|Монголулс|Mongolia)"
+emoji = "🇲🇳"
+
+[[emojis.emoji]]
+match = "(孟加拉|Bangladesh)"
+emoji = "🇧🇩"
+
+[[emojis.emoji]]
+match = "(秘鲁|Peru)"
+emoji = "🇵🇪"
+
+[[emojis.emoji]]
+match = "(墨西哥|Mexico)"
+emoji = "🇲🇽"
+
+[[emojis.emoji]]
+match = "(尼日利亚|Nigeria)"
+emoji = "🇳🇬"
+
+[[emojis.emoji]]
+match = "(葡萄牙|Portugal)"
+emoji = "🇵🇹"
+
+[[emojis.emoji]]
+match = "(塞尔维亚|Serbia)"
+emoji = "🇷🇸"
+
+[[emojis.emoji]]
+match = "(塞浦路斯|Cyprus)"
+emoji = "🇨🇾"
+
+[[emojis.emoji]]
+match = "(斯洛伐克|Slovensko)"
+emoji = "🇸🇰"
+
+[[emojis.emoji]]
+match = "(斯洛文尼亚|Slovenia)"
+emoji = "🇸🇮"
+
+[[emojis.emoji]]
+match = "(突尼斯|Tunisia)"
+emoji = "🇹🇳"
+
+[[emojis.emoji]]
+match = "(乌克兰|Ukraine)"
+emoji = "🇺🇦"
+
+[[emojis.emoji]]
+match = "(乌拉圭|Uruguay)"
+emoji = "🇺🇾"
+
+[[emojis.emoji]]
+match = "(希腊|Greece)"
+emoji = "🇬🇷"
+
+[[emojis.emoji]]
+match = "(新西兰|纽西兰|New Zealand)"
+emoji = "🇳🇿"
+
+[[emojis.emoji]]
+match = "(伊朗|Iran)"
+emoji = "🇮🇷"
+
+[[emojis.emoji]]
+match = "(约旦|Jordan)"
+emoji = "🇯🇴"
 
 [[emojis.emoji]]
 match = "(智利|Chile)"
 emoji = "🇨🇱"
+
+[[emojis.emoji]]
+match = "(Ascension|阿森松)"
+emoji = "🇦🇨"
+
+[[emojis.emoji]]
+match = "(Austria|Vienna|奥地利|维也纳)"
+emoji = "🇦🇹"
 
 [[emojis.emoji]]
 match = "(Colombia|哥伦比亚)"
@@ -562,32 +426,8 @@ match = "(Costa Rica|哥斯达黎加)"
 emoji = "🇨🇷"
 
 [[emojis.emoji]]
-match = "(塞浦路斯|Cyprus)"
-emoji = "🇨🇾"
-
-[[emojis.emoji]]
 match = "(Czech|捷克)"
 emoji = "🇨🇿"
-
-[[emojis.emoji]]
-match = "(?i:DE|Germany|法兰克福|德.*(?!▷|回|转))"
-emoji = "🇩🇪"
-
-[[emojis.emoji]]
-match = "(Denmark|丹麦)"
-emoji = "🇩🇰"
-
-[[emojis.emoji]]
-match = "(爱沙尼亚|Estonia)"
-emoji = "🇪🇪"
-
-[[emojis.emoji]]
-match = "(埃及|Egypt)"
-emoji = "🇪🇬"
-
-[[emojis.emoji]]
-match = "(Spain|西班牙)"
-emoji = "🇪🇸"
 
 [[emojis.emoji]]
 match = "(Europe|欧洲)"
@@ -598,24 +438,12 @@ match = "(Finland|Helsinki|芬兰|赫尔辛基)"
 emoji = "🇫🇮"
 
 [[emojis.emoji]]
-match = "(FR|France|Paris|法国.*(?!▷|回|转)|巴黎)"
-emoji = "🇫🇷"
-
-[[emojis.emoji]]
-match = "(格鲁吉亚|Georgia)"
-emoji = "🇬🇪"
-
-[[emojis.emoji]]
-match = "(希腊|Greece)"
-emoji = "🇬🇷"
-
-[[emojis.emoji]]
-match = "(克罗地亚|Croatia)"
-emoji = "🇭🇷"
-
-[[emojis.emoji]]
 match = "(Hungary|匈牙利)"
 emoji = "🇭🇺"
+
+[[emojis.emoji]]
+match = "(IMAN|马恩岛|Mann)"
+emoji = "🇮🇲"
 
 [[emojis.emoji]]
 match = "(Indonesia|Jakarta|印尼|印度尼西亚|雅加达)"
@@ -630,478 +458,476 @@ match = "(Israel|以色列)"
 emoji = "🇮🇱"
 
 [[emojis.emoji]]
-match = "(IMAN|马恩岛|Mann)"
-emoji = "🇮🇲"
-
-[[emojis.emoji]]
-match = "(India|Mumbai|印度|孟买)"
-emoji = "🇮🇳"
-
-[[emojis.emoji]]
-match = "(伊朗|Iran)"
-emoji = "🇮🇷"
-
-[[emojis.emoji]]
-match = "(Iceland|冰岛)"
-emoji = "🇮🇸"
-
-[[emojis.emoji]]
 match = "(Italy|Milan|意大利|米兰)"
 emoji = "🇮🇹"
-
-[[emojis.emoji]]
-match = "(约旦|Jordan)"
-emoji = "🇯🇴"
-
-[[emojis.emoji]]
-match = "(肯尼亚|Kenya)"
-emoji = "🇰🇪"
-
-[[emojis.emoji]]
-match = "(吉尔吉斯斯坦|Kyrgyzstan)"
-emoji = "🇰🇬"
-
-[[emojis.emoji]]
-match = "(柬埔寨|Cambodia)"
-emoji = "🇰🇭"
-
-[[emojis.emoji]]
-match = "(KP|North.*?Korea|朝鲜)"
-emoji = "🇰🇵"
-
-[[emojis.emoji]]
-match = "(哈萨克斯坦|Kazakhstan)"
-emoji = "🇰🇿"
-
-[[emojis.emoji]]
-match = "(立陶宛|Lietuvos)"
-emoji = "🇱🇹"
-
-[[emojis.emoji]]
-match = "(卢森堡|Luxemburg|Luxembourg)"
-emoji = "🇱🇺"
-
-[[emojis.emoji]]
-match = "(拉脱维亚|Latvia)"
-emoji = "🇱🇻"
 
 [[emojis.emoji]]
 match = "(Moldova|摩尔多瓦)"
 emoji = "🇲🇩"
 
 [[emojis.emoji]]
-match = "(北马其顿|Macedonia)"
-emoji = "🇲🇰"
-
-[[emojis.emoji]]
-match = "(蒙古|Монголулс|Mongolia)"
-emoji = "🇲🇳"
-
-[[emojis.emoji]]
-match = "(MO|Macao|澳.*(?!▷|回|转)|CTM)"
-emoji = "🇲🇴"
-
-[[emojis.emoji]]
-match = "(墨西哥|Mexico)"
-emoji = "🇲🇽"
-
-[[emojis.emoji]]
-match = "(MY|Malaysia|马来西亚)"
-emoji = "🇲🇾"
-
-[[emojis.emoji]]
-match = "(尼日利亚|Nigeria)"
-emoji = "🇳🇬"
-
-[[emojis.emoji]]
-match = "(NL|Netherlands|荷兰|阿姆斯特丹)"
-emoji = "🇳🇱"
-
-[[emojis.emoji]]
 match = "(Norway|挪威)"
 emoji = "🇳🇴"
-
-[[emojis.emoji]]
-match = "(新西兰|纽西兰)"
-emoji = "🇳🇿"
-
-[[emojis.emoji]]
-match = "(巴拿马|Panama)"
-emoji = "🇵🇦"
-
-[[emojis.emoji]]
-match = "(秘鲁|Peru)"
-emoji = "🇵🇪"
-
-[[emojis.emoji]]
-match = "(PH|Philippines|菲律宾)"
-emoji = "🇵🇭"
 
 [[emojis.emoji]]
 match = "(Pakistan|巴基斯坦)"
 emoji = "🇵🇰"
 
 [[emojis.emoji]]
-match = "(Poland|波兰)"
-emoji = "🇵🇱"
+match = "(Switzerland|Zurich|瑞士|苏黎世)"
+emoji = "🇨🇭"
 
 [[emojis.emoji]]
-match = "(葡萄牙|Portugal)"
-emoji = "🇵🇹"
+match = "(\bAR\b|阿根廷|Argentina)"
+emoji = "🇦🇷"
 
 [[emojis.emoji]]
-match = "(RO|Romania|罗马尼亚)"
+match = "(\bBE\b|Belgium|比利时)"
+emoji = "🇧🇪"
+
+[[emojis.emoji]]
+match = "(\bBR\b|Brazil|Paulo|巴西|圣保罗)"
+emoji = "🇧🇷"
+
+[[emojis.emoji]]
+match = "(\bMO\b|Macao|澳门|\bCTM\b|澳.*(?!▷|回|转))"
+emoji = "🇲🇴"
+
+[[emojis.emoji]]
+match = "(\bMY\b|Malaysia|马来西亚)"
+emoji = "🇲🇾"
+
+[[emojis.emoji]]
+match = "(\bPH\b|Philippines|菲律宾)"
+emoji = "🇵🇭"
+
+[[emojis.emoji]]
+match = "(\bRO\b|Romania|罗马尼亚)"
 emoji = "🇷🇴"
 
 [[emojis.emoji]]
-match = "(塞尔维亚|Serbia)"
-emoji = "🇷🇸"
-
-[[emojis.emoji]]
-match = "(SA|Arabia|沙特)"
+match = "(\bSA\b|Arabia|沙特)"
 emoji = "🇸🇦"
 
 [[emojis.emoji]]
-match = "(SE|Sweden|瑞典)"
+match = "(\bSE\b|Sweden|瑞典)"
 emoji = "🇸🇪"
 
 [[emojis.emoji]]
-match = "(斯洛文尼亚|Slovenia)"
-emoji = "🇸🇮"
-
-[[emojis.emoji]]
-match = "(斯洛伐克|Slovensko)"
-emoji = "🇸🇰"
-
-[[emojis.emoji]]
-match = "(TH|Thailand|泰国|曼谷)"
+match = "(\bTH\b|Thailand|泰国|曼谷)"
 emoji = "🇹🇭"
 
 [[emojis.emoji]]
-match = "(突尼斯|Tunisia)"
-emoji = "🇹🇳"
-
-[[emojis.emoji]]
-match = "(TR|Turkey|土耳其|土.*(?!▷|回|转)|伊斯坦布尔)"
+match = "(\bTR\b|Turkey|土耳其|土.*(?!▷|回|转)|伊斯坦布尔)"
 emoji = "🇹🇷"
 
 [[emojis.emoji]]
-match = "(乌拉圭|Uruguay)"
-emoji = "🇺🇾"
-
-[[emojis.emoji]]
-match = "(VN|Vietnam|越南)"
+match = "(\bVN\b|Vietnam|越南)"
 emoji = "🇻🇳"
 
 [[emojis.emoji]]
-match = "(ZA|Africa|南非)"
+match = "(\bZA\b|Africa|南非)"
 emoji = "🇿🇦"
 
 [[emojis.emoji]]
-match = "(?i:UK|England|United.*?Kingdom|London|英.*(?!▷|回|转)|[^-]英|伦敦)"
-emoji = "🇬🇧"
+match = "(?i:\bAU[S]?\b|Australia|Sydney|澳大利亚|澳洲|悉尼)"
+emoji = "🇦🇺"
 
 [[emojis.emoji]]
-match = "(?i:JP|Japan|Tokyo|Osaka|Saitama|日.*(?!▷|回|转)|东京|大阪|埼玉|沪日|穗日|川日|中日|泉日|杭日|[^-]日)"
+match = "(?i:\bD[N]?K\b|Denmark|丹麦)"
+emoji = "🇩🇰"
+
+[[emojis.emoji]]
+match = "(?i:\bDE[U]?\b|Germany|法兰克福|德(国|意志)|中德|^德$|德.*(?!▷|回|转))"
+emoji = "🇩🇪"
+
+[[emojis.emoji]]
+match = "(?i:\bES[P]?\b|Spain|西班牙)"
+emoji = "🇪🇸"
+
+[[emojis.emoji]]
+match = "(?i:\bFR[A]?\b|France|Paris|法国|巴黎|法国.*(?!▷|回|转))"
+emoji = "🇫🇷"
+
+[[emojis.emoji]]
+match = "(?i:\bIN[D]?\b|India|Mumbai|印度|孟买|加尔各答|贾坎德|泰米尔纳德)"
+emoji = "🇮🇳"
+
+[[emojis.emoji]]
+match = "(?i:\bIS[L]?\b|Iceland|冰岛)"
+emoji = "🇮🇸"
+
+[[emojis.emoji]]
+match = "(?i:\bKP\b|North.*?Korea|朝鲜)"
+emoji = "🇰🇵"
+
+[[emojis.emoji]]
+match = "(?i:\bNL[D]?\b|Netherlands|荷兰|阿姆斯特丹)"
+emoji = "🇳🇱"
+
+[[emojis.emoji]]
+match = "(?i:\bP[O]?L\b|Poland|波兰)"
+emoji = "🇵🇱"
+
+[[emojis.emoji]]
+match = "(?i:\bUAE\b|Dubai|阿联酋|迪拜)"
+emoji = "🇦🇪"
+
+[[emojis.emoji]]
+match = "(?i:\bCA[N]?\b|Canada|Toronto|Montreal|Vancouver|加拿大|蒙特利尔|温哥华|楓葉|枫叶|加(?!州|坡|拉).*(?!▷|回|转))"
+emoji = "🇨🇦"
+
+[[emojis.emoji]]
+match = "(?i:\bJP[N]?\b|Japan|Tokyo|Osaka|Saitama|日本|东京|大阪|埼玉|[^-]日|日.*(?!▷|回|转)|沪日|穗日|川日|中日|泉日|杭日)"
 emoji = "🇯🇵"
 
 [[emojis.emoji]]
-match = "(?i:KR|Korea|KOR|首尔|韩|韓)"
+match = "(?i:\bK[O]?R\b|Korea|首尔|韩|韓)"
 emoji = "🇰🇷"
 
 [[emojis.emoji]]
-match = "(?i:RU|Russia|Moscow|Petersburg|Siberia|俄.*(?!▷|回|转)|伯力|莫斯科|圣彼得堡|西伯利亚|新西伯利亚|哈巴罗夫斯克|俄罗斯|京俄|杭俄|[^-]俄)"
+match = "(?i:\bRU[S]?\b|Russia|Moscow|Petersburg|Siberia|伯力|莫斯科|圣彼得堡|西伯利亚|新西伯利亚|哈巴罗夫斯克|俄罗斯|[^-]俄|俄.*(?!▷|回|转)|京俄|杭俄)"
 emoji = "🇷🇺"
 
 [[emojis.emoji]]
-match = "(?i:SG|新加坡|新(?!▷|西)|Singapore|狮城|沪新|京新|泉新|穗新|深新|杭新|[^-]新)"
+match = "(?i:\bSG[P]?\b|Singapore|新加坡|狮城|[^-]新|新(?!▷|西)|沪新|京新|泉新|穗新|深新|杭新)"
 emoji = "🇸🇬"
 
 [[emojis.emoji]]
-match = "(?i:US|America|United.*?States|美.*(?!▷|回|转)|[^-]美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|沪美|京美)"
+match = "(?i:\bUK\b|\bGB[R]?\b|England|United.*?Kingdom|London|英国|[^-]英|伦敦|英.*(?!▷|回|转))"
+emoji = "🇬🇧"
+
+[[emojis.emoji]]
+match = "(?i:\bUS[A]?\b|America|United.*?States|美国|[^-]美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|美.*(?!▷|回|转)|沪美|京美)"
 emoji = "🇺🇸"
 
 [[emojis.emoji]]
-match = "(?i:HK|Hong.*?Kong|HKT|HKBN|HGC|WTT|CMI|港(?!▷|回|转)|[^-]港(?!▷|回|转))"
+match = "(?i:\bHK[G]?\b|Hong.*?Kong|\bHKT\b|\bHKBN\b|\bHGC\b|\bWTT\b|\bCMI\b|[^-]港|港(?!▷|回|转))"
 emoji = "🇭🇰"
 
 [[emojis.emoji]]
-match = "(?i:TW|Taiwan|CHT|HiNet|台.*(?!▷|回|转)|台北|台中|新北|彰化|[^-]台)"
+match = "(?i:\bTW[N]?\b|Taiwan|新北|彰化|\bCHT\b|台湾|[^-]台|\bHINET\b|台.*(?!▷|回|转)|台北|台中)"
 emoji = "🇹🇼"
 
 [[emojis.emoji]]
-match = "(?i:CN|China|回国|中.*(?!▷|回|转)|苏.*(?!▷|回|转)|京.*(?!▷|回|转)|沪.*(?!▷|回|转)|穗.*(?!▷|回|转)|深(?!▷|港)|杭.*(?!▷|回|转)|徐.*(?!▷|回|转)|青.*(?!▷|回|转)|甬.*(?!▷|回|转)|镇.*(?!▷|回|转)|禅.*(?!▷|回|转)|蓉.*(?!▷|回|转)|江苏|北京|上海|广州|深圳|杭州|常州|徐州|青岛|宁波|镇江|成都|back)"
+match = "(?i:\bC[H]?N\b|China|回国|中国[^-]|江苏[^-]|北京[^-]|上海[^-]|广州[^-]|深圳[^-]|杭州[^-]|常州[^-]|徐州[^-]|青岛[^-]|宁波[^-]|镇江[^-]|成都[^-]|back|中.*(?!▷|回|转)|苏.*(?!▷|回|转)|京.*(?!▷|回|转)|沪.*(?!▷|回|转)|穗.*(?!▷|回|转)|深(?!▷|港)|杭.*(?!▷|回|转)|徐.*(?!▷|回|转)|青.*(?!▷|回|转)|甬.*(?!▷|回|转)|镇.*(?!▷|回|转)|禅.*(?!▷|回|转)|蓉.*(?!▷|回|转))"
 emoji = "🇨🇳"
 
 
 [[custom_groups]]
 name = "🍖 默认代理"
 type = "select"
-rule = ["[]🔄 延迟最低", "[]🇹🇼 台湾-SUB1", "[]🇹🇼 台湾-SUB2", "[]🇭🇰 香港-SUB1", "[]🇭🇰 香港-SUB2", "[]🇺🇸 美国-SUB1", "[]🇺🇸 美国-SUB2", "[]🇯🇵 日本-SUB1", "[]🇯🇵 日本-SUB2", "[]🇸🇬 新加坡-SUB1", "[]🇸🇬 新加坡-SUB2", "[]🇰🇷 韩国-SUB1", "[]🇰🇷 韩国-SUB2", "[]🇷🇺 俄罗斯-SUB1", "[]🇷🇺 俄罗斯-SUB2", "[]🍱 冷门地区", "[]🇭🇰 香港-轮询", "[]🇹🇼 台湾-轮询", "[]🇺🇸 美国-轮询", "[]🇯🇵 日本-轮询", "[]🇬🇧 英国", "[]🇷🇺 俄罗斯-轮询", "[]🇸🇬 新加坡-轮询", "[]🇰🇷 韩国-轮询"]
 disable_udp = false
+rule = ["[]🔄 延迟最低", "[]🇹🇼 台湾-SUB1", "[]🇹🇼 台湾-SUB2", "[]🇹🇼 台湾-SUB3", "[]🇭🇰 香港-SUB1", "[]🇭🇰 香港-SUB2", "[]🇭🇰 香港-SUB3", "[]🇺🇸 美国-SUB1", "[]🇺🇸 美国-SUB2", "[]🇺🇸 美国-SUB3", "[]🇯🇵 日本-SUB1", "[]🇯🇵 日本-SUB2", "[]🇯🇵 日本-SUB3", "[]🇸🇬 新加坡-SUB1", "[]🇸🇬 新加坡-SUB2", "[]🇸🇬 新加坡-SUB3", "[]🇰🇷 韩国-SUB1", "[]🇰🇷 韩国-SUB2", "[]🇰🇷 韩国-SUB3", "[]🇷🇺 俄罗斯-SUB1", "[]🇷🇺 俄罗斯-SUB2", "[]🇷🇺 俄罗斯-SUB3", "[]🍱 冷门地区", "[]🇭🇰 香港-轮询", "[]🇹🇼 台湾-轮询", "[]🇺🇸 美国-轮询", "[]🇯🇵 日本-轮询", "[]🇬🇧 英国", "[]🇷🇺 俄罗斯-轮询", "[]🇸🇬 新加坡-轮询", "[]🇰🇷 韩国-轮询"]
 
 [[custom_groups]]
 name = "🌍 国外媒体"
 type = "select"
-rule = ["[]🇭🇰 香港-Media", "[]🇹🇼 台湾-Media", "[]🇺🇸 美国-Media", "[]🇯🇵 日本-Media", "[]🇬🇧 英国-Media", "[]🇸🇬 新加坡-Media", "[]🇰🇷 韩国-Media", "[]🇮🇳 印度-Media", "[]🇭🇰 香港-SUB1", "[]🇭🇰 香港-SUB2", "[]🇹🇼 台湾-SUB1", "[]🇹🇼 台湾-SUB2", "[]🇺🇸 美国-SUB1", "[]🇺🇸 美国-SUB2", "[]🇯🇵 日本-SUB1", "[]🇯🇵 日本-SUB2", "[]🇸🇬 新加坡-SUB1", "[]🇸🇬 新加坡-SUB2", "[]🇬🇧 英国", "[]🍖 默认代理"]
 disable_udp = false
+rule = ["[]🇭🇰 香港-Media", "[]🇹🇼 台湾-Media", "[]🇺🇸 美国-Media", "[]🇯🇵 日本-Media", "[]🇬🇧 英国-Media", "[]🇸🇬 新加坡-Media", "[]🇰🇷 韩国-Media", "[]🇷🇺 俄罗斯-Media", "[]🇮🇳 印度-Media", "[]🇧🇬 保加利亚-Media", "[]🇧🇷 巴西-Media", "[]🇨🇭 瑞士-Media", "[]🇨🇿 捷克-Media", "[]🇱🇻 拉脱维亚-Media", "[]🇳🇱 荷兰-Media", "[]🇵🇱 波兰-Media", "[]🇹🇭 泰国-Media", "[]🇹🇷 土耳其-Media", "[]🇺🇦 乌克兰-Media", "[]🇻🇳 越南-Media", "[]🇭🇰 香港-SUB1", "[]🇭🇰 香港-SUB2", "[]🇭🇰 香港-SUB3", "[]🇹🇼 台湾-SUB1", "[]🇹🇼 台湾-SUB2", "[]🇹🇼 台湾-SUB3", "[]🇺🇸 美国-SUB1", "[]🇺🇸 美国-SUB2", "[]🇺🇸 美国-SUB3", "[]🇯🇵 日本-SUB1", "[]🇯🇵 日本-SUB2", "[]🇯🇵 日本-SUB3", "[]🇸🇬 新加坡-SUB1", "[]🇸🇬 新加坡-SUB2", "[]🇸🇬 新加坡-SUB3", "[]🇬🇧 英国", "[]🍖 默认代理"]
 
 [[custom_groups]]
 name = "🎮 游戏服务"
 type = "select"
-rule = ["[]🇭🇰 香港-SUB1", "[]🇭🇰 香港-SUB2", "[]🇹🇼 台湾-SUB1", "[]🇹🇼 台湾-SUB2", "[]🇺🇸 美国-SUB1", "[]🇺🇸 美国-SUB2", "[]🇯🇵 日本-SUB1", "[]🇯🇵 日本-SUB2", "[]🇸🇬 新加坡-SUB1", "[]🇸🇬 新加坡-SUB2", "[]🇬🇧 英国", "[]🇰🇷 韩国-SUB1", "[]🇰🇷 韩国-SUB2", "[]🇷🇺 俄罗斯-SUB1", "[]🇷🇺 俄罗斯-SUB2", "[]🍖 默认代理"]
 disable_udp = false
+rule = ["[]🇭🇰 香港-SUB1", "[]🇭🇰 香港-SUB2", "[]🇭🇰 香港-SUB3", "[]🇹🇼 台湾-SUB1", "[]🇹🇼 台湾-SUB2", "[]🇹🇼 台湾-SUB3", "[]🇺🇸 美国-SUB1", "[]🇺🇸 美国-SUB2", "[]🇺🇸 美国-SUB3", "[]🇯🇵 日本-SUB1", "[]🇯🇵 日本-SUB2", "[]🇯🇵 日本-SUB3", "[]🇸🇬 新加坡-SUB1", "[]🇸🇬 新加坡-SUB2", "[]🇸🇬 新加坡-SUB3", "[]🇬🇧 英国", "[]🇰🇷 韩国-SUB1", "[]🇰🇷 韩国-SUB2", "[]🇰🇷 韩国-SUB3", "[]🇷🇺 俄罗斯-SUB1", "[]🇷🇺 俄罗斯-SUB2", "[]🇷🇺 俄罗斯-SUB3", "[]🍖 默认代理"]
 
 [[custom_groups]]
 name = "🌏 大陆服务"
 type = "select"
-rule = ["[]🎯 直连服务", "(🇨🇳)", "[]🇭🇰 香港-SUB1", "[]🇭🇰 香港-SUB2", "[]🇹🇼 台湾-SUB1", "[]🇹🇼 台湾-SUB2", "[]🇸🇬 新加坡-SUB1", "[]🇸🇬 新加坡-SUB2", "[]🍖 默认代理"]
 disable_udp = false
+rule = ["[]🎯 直连服务", "(🇨🇳)", "[]🇭🇰 香港-SUB1", "[]🇭🇰 香港-SUB2", "[]🇭🇰 香港-SUB3", "[]🇭🇰 香港-轮询", "[]🇹🇼 台湾-SUB1", "[]🇹🇼 台湾-SUB2", "[]🇹🇼 台湾-SUB3", "[]🇹🇼 台湾-轮询", "[]🇸🇬 新加坡-SUB1", "[]🇸🇬 新加坡-SUB2", "[]🇸🇬 新加坡-SUB3", "[]🍖 默认代理"]
 
 [[custom_groups]]
 name = "🚧 终末策略"
 type = "select"
-rule = ["[]🔄 延迟最低", "[]🎯 直连服务", "[]🌏 大陆服务", "(灭霸)", "[]🍖 默认代理"]
 disable_udp = false
+rule = ["[]🔄 延迟最低", "[]🎯 直连服务", "[]🌏 大陆服务", "(灭霸)", "[]🍖 默认代理"]
 
 [[custom_groups]]
 name = "📡 视频解析"
 type = "select"
-rule = ["[]🎯 直连服务", "[]🔄 延迟最低", "[]🌏 大陆服务", "[]🍖 默认代理"]
 disable_udp = false
+rule = ["[]🎯 直连服务", "[]🔄 延迟最低", "[]🌏 大陆服务", "[]🍖 默认代理"]
 
 [[custom_groups]]
 name = "📺 哔哩哔哩"
 type = "select"
-rule = ["[]🎯 直连服务", "[]🇭🇰 香港-Media", "[]🇹🇼 台湾-Media", "(🇨🇳)", "[]🇭🇰 香港-轮询", "[]🇭🇰 香港-SUB1", "[]🇭🇰 香港-SUB2", "[]🇹🇼 台湾-轮询", "[]🇹🇼 台湾-SUB1", "[]🇹🇼 台湾-SUB2", "[]🇺🇸 美国-轮询", "[]🇺🇸 美国-SUB1", "[]🇺🇸 美国-SUB2", "[]🇯🇵 日本-SUB1", "[]🇯🇵 日本-SUB2", "[]🇸🇬 新加坡-SUB1", "[]🇸🇬 新加坡-SUB2", "[]🍱 冷门地区", "[]🍖 默认代理"]
 disable_udp = false
+rule = ["[]🎯 直连服务", "[]🇭🇰 香港-Media", "[]🇹🇼 台湾-Media", "(🇨🇳)", "[]🇭🇰 香港-轮询", "[]🇭🇰 香港-SUB1", "[]🇭🇰 香港-SUB2", "[]🇭🇰 香港-SUB3", "[]🇹🇼 台湾-轮询", "[]🇹🇼 台湾-SUB1", "[]🇹🇼 台湾-SUB2", "[]🇹🇼 台湾-SUB3", "[]🇺🇸 美国-轮询", "[]🇺🇸 美国-SUB1", "[]🇺🇸 美国-SUB2", "[]🇺🇸 美国-SUB3", "[]🇯🇵 日本-SUB1", "[]🇯🇵 日本-SUB2", "[]🇯🇵 日本-SUB3", "[]🇸🇬 新加坡-SUB1", "[]🇸🇬 新加坡-SUB2", "[]🇸🇬 新加坡-SUB3", "[]🍱 冷门地区", "[]🍖 默认代理"]
 
 [[custom_groups]]
 name = "🥝 爱奇艺"
 type = "select"
-rule = ["[]🎯 直连服务", "[]🇭🇰 香港-Media", "[]🇹🇼 台湾-Media", "[]🇺🇸 美国-Media", "[]🇯🇵 日本-Media", "[]🇬🇧 英国-Media", "[]🇸🇬 新加坡-Media", "[]🇰🇷 韩国-Media", "[]🇮🇳 印度-Media", "(🇨🇳)", "[]🇹🇼 台湾-SUB1", "[]🇹🇼 台湾-SUB2", "[]🇭🇰 香港-SUB1", "[]🇭🇰 香港-SUB2"]
 disable_udp = false
+rule = ["[]🎯 直连服务", "[]🇭🇰 香港-Media", "[]🇹🇼 台湾-Media", "[]🇺🇸 美国-Media", "[]🇯🇵 日本-Media", "[]🇬🇧 英国-Media", "[]🇸🇬 新加坡-Media", "[]🇰🇷 韩国-Media", "[]🇷🇺 俄罗斯-Media", "[]🇮🇳 印度-Media", "[]🇧🇬 保加利亚-Media", "[]🇧🇷 巴西-Media", "[]🇨🇭 瑞士-Media", "[]🇨🇿 捷克-Media", "[]🇱🇻 拉脱维亚-Media", "[]🇳🇱 荷兰-Media", "[]🇵🇱 波兰-Media", "[]🇹🇭 泰国-Media", "[]🇹🇷 土耳其-Media", "[]🇺🇦 乌克兰-Media", "[]🇻🇳 越南-Media", "(🇨🇳)", "[]🇹🇼 台湾-SUB1", "[]🇹🇼 台湾-SUB2", "[]🇹🇼 台湾-SUB3", "[]🇭🇰 香港-SUB1", "[]🇭🇰 香港-SUB2", "[]🇭🇰 香港-SUB3"]
 
 [[custom_groups]]
 name = "🐷 网易音乐"
 type = "select"
-rule = ["[]🎯 直连服务", "(网易云)", "(UnblockNetEaseMusic)", "(🇨🇳)", "[]🌏 大陆服务"]
 disable_udp = false
+rule = ["[]🎯 直连服务", "(网易云)", "(UnblockNetEaseMusic)", "(🇨🇳)", "[]🌏 大陆服务"]
 
 [[custom_groups]]
 name = "💊 小米服务"
 type = "select"
-rule = ["[]🎯 直连服务", "(🇨🇳)", "[]🇭🇰 香港-SUB1", "[]🇭🇰 香港-SUB2", "[]🇹🇼 台湾-SUB1", "[]🇹🇼 台湾-SUB2", "[]🇺🇸 美国-SUB1", "[]🇺🇸 美国-SUB2", "[]🇸🇬 新加坡-SUB1", "[]🇸🇬 新加坡-SUB2", "[]🍖 默认代理"]
 disable_udp = false
+rule = ["[]🎯 直连服务", "(🇨🇳)", "[]🇭🇰 香港-SUB1", "[]🇭🇰 香港-SUB2", "[]🇭🇰 香港-SUB3", "[]🇭🇰 香港-轮询", "[]🇹🇼 台湾-SUB1", "[]🇹🇼 台湾-SUB2", "[]🇹🇼 台湾-SUB3", "[]🇹🇼 台湾-轮询", "[]🇺🇸 美国-SUB1", "[]🇺🇸 美国-SUB2", "[]🇺🇸 美国-SUB3", "[]🇸🇬 新加坡-SUB1", "[]🇸🇬 新加坡-SUB2", "[]🇸🇬 新加坡-SUB3", "[]🍖 默认代理"]
 
 [[custom_groups]]
 name = "🏬 阿里巴巴"
 type = "select"
-rule = ["[]🎯 直连服务", "(🇨🇳)", "[]🌏 大陆服务"]
 disable_udp = false
+rule = ["[]🎯 直连服务", "(🇨🇳)", "[]🌏 大陆服务"]
 
 [[custom_groups]]
 name = "🍎 苹果服务"
 type = "select"
-rule = ["[]🍖 默认代理", "[]🔄 延迟最低", "[]🎯 直连服务"]
 disable_udp = false
+rule = ["[]🍖 默认代理", "[]🔄 延迟最低", "[]🎯 直连服务"]
 
 [[custom_groups]]
 name = "🙈 谷歌服务"
 type = "select"
-rule = ["[]🔄 延迟最低", "[]🇭🇰 香港-轮询", "[]🇹🇼 台湾-轮询", "[]🇺🇸 美国-轮询", "[]🇯🇵 日本-轮询", "[]🇬🇧 英国", "[]🇸🇬 新加坡-轮询", "[]🇷🇺 俄罗斯-轮询", "[]🇰🇷 韩国-轮询", "[]🍱 冷门地区", "[]🇹🇼 台湾-SUB1", "[]🇹🇼 台湾-SUB2", "[]🇭🇰 香港-SUB1", "[]🇭🇰 香港-SUB2", "[]🇺🇸 美国-SUB1", "[]🇺🇸 美国-SUB2", "[]🇯🇵 日本-SUB1", "[]🇯🇵 日本-SUB2", "[]🇸🇬 新加坡-SUB1", "[]🇸🇬 新加坡-SUB2", "[]🇷🇺 俄罗斯-SUB1", "[]🇷🇺 俄罗斯-SUB2", "[]🇰🇷 韩国-SUB1", "[]🇰🇷 韩国-SUB2"]
 disable_udp = false
+rule = ["[]🔄 延迟最低", "[]🇭🇰 香港-轮询", "[]🇹🇼 台湾-轮询", "[]🇺🇸 美国-轮询", "[]🇯🇵 日本-轮询", "[]🇬🇧 英国", "[]🇸🇬 新加坡-轮询", "[]🇷🇺 俄罗斯-轮询", "[]🇰🇷 韩国-轮询", "[]🍱 冷门地区", "[]🇹🇼 台湾-SUB1", "[]🇹🇼 台湾-SUB2", "[]🇹🇼 台湾-SUB3", "[]🇭🇰 香港-SUB1", "[]🇭🇰 香港-SUB2", "[]🇭🇰 香港-SUB3", "[]🇺🇸 美国-SUB1", "[]🇺🇸 美国-SUB2", "[]🇺🇸 美国-SUB3", "[]🇯🇵 日本-SUB1", "[]🇯🇵 日本-SUB2", "[]🇯🇵 日本-SUB3", "[]🇸🇬 新加坡-SUB1", "[]🇸🇬 新加坡-SUB2", "[]🇸🇬 新加坡-SUB3", "[]🇷🇺 俄罗斯-SUB1", "[]🇷🇺 俄罗斯-SUB2", "[]🇷🇺 俄罗斯-SUB3", "[]🇰🇷 韩国-SUB1", "[]🇰🇷 韩国-SUB2", "[]🇰🇷 韩国-SUB3"]
 
 [[custom_groups]]
 name = "🐻 LineTV"
 type = "select"
-rule = ["[]🇹🇼 台湾-Media", "[]🇹🇼 台湾-SUB1", "[]🇹🇼 台湾-SUB2", "[]🇯🇵 日本-Media", "[]🇯🇵 日本-SUB1", "[]🇯🇵 日本-SUB2"]
 disable_udp = false
+rule = ["[]🇹🇼 台湾-Media", "[]🇹🇼 台湾-SUB1", "[]🇹🇼 台湾-SUB2", "[]🇹🇼 台湾-SUB3", "[]🇯🇵 日本-Media", "[]🇯🇵 日本-SUB1", "[]🇯🇵 日本-SUB2", "[]🇯🇵 日本-SUB3"]
 
 [[custom_groups]]
 name = "🐼 微软服务"
 type = "select"
-rule = ["[]🔄 延迟最低", "[]🇺🇸 美国-轮询", "[]🇭🇰 香港-轮询", "[]🇹🇼 台湾-轮询", "[]🇯🇵 日本-轮询", "[]🇸🇬 新加坡-轮询", "[]🇰🇷 韩国-轮询", "[]🇬🇧 英国", "[]🍱 冷门地区", "[]🇺🇸 美国-SUB1", "[]🇺🇸 美国-SUB2", "[]🇭🇰 香港-SUB1", "[]🇭🇰 香港-SUB2", "[]🇹🇼 台湾-SUB1", "[]🇹🇼 台湾-SUB2", "[]🇸🇬 新加坡-SUB1", "[]🇸🇬 新加坡-SUB2", "[]🇯🇵 日本-SUB1", "[]🇯🇵 日本-SUB2", "[]🌏 大陆服务", "[]🎯 直连服务"]
 disable_udp = false
+rule = ["[]🔄 延迟最低", "[]🇺🇸 美国-轮询", "[]🇭🇰 香港-轮询", "[]🇹🇼 台湾-轮询", "[]🇯🇵 日本-轮询", "[]🇸🇬 新加坡-轮询", "[]🇰🇷 韩国-轮询", "[]🇬🇧 英国", "[]🍱 冷门地区", "[]🇺🇸 美国-SUB1", "[]🇺🇸 美国-SUB2", "[]🇺🇸 美国-SUB3", "[]🇭🇰 香港-SUB1", "[]🇭🇰 香港-SUB2", "[]🇭🇰 香港-SUB3", "[]🇹🇼 台湾-SUB1", "[]🇹🇼 台湾-SUB2", "[]🇹🇼 台湾-SUB3", "[]🇸🇬 新加坡-SUB1", "[]🇸🇬 新加坡-SUB2", "[]🇸🇬 新加坡-SUB3", "[]🇯🇵 日本-SUB1", "[]🇯🇵 日本-SUB2", "[]🇯🇵 日本-SUB3", "[]🌏 大陆服务", "[]🎯 直连服务"]
 
 [[custom_groups]]
 name = "🎥 奈飞影视"
 type = "select"
-rule = ["[]🇭🇰 香港-Media", "[]🇹🇼 台湾-Media", "[]🇺🇸 美国-Media", "[]🇯🇵 日本-Media", "[]🇬🇧 英国-Media", "[]🇸🇬 新加坡-Media", "[]🇰🇷 韩国-Media", "[]🇮🇳 印度-Media", "[]🇹🇼 台湾-SUB1", "[]🇹🇼 台湾-SUB2", "[]🇺🇸 美国-SUB1", "[]🇺🇸 美国-SUB2", "[]🇭🇰 香港-SUB1", "[]🇭🇰 香港-SUB2", "[]🇬🇧 英国", "[]🇯🇵 日本-SUB1", "[]🇯🇵 日本-SUB2", "[]🇸🇬 新加坡-SUB1", "[]🇸🇬 新加坡-SUB2", "[]🇷🇺 俄罗斯-SUB1", "[]🇷🇺 俄罗斯-SUB2", "[]🍖 默认代理"]
 disable_udp = false
+rule = ["[]🇭🇰 香港-Media", "[]🇹🇼 台湾-Media", "[]🇺🇸 美国-Media", "[]🇯🇵 日本-Media", "[]🇬🇧 英国-Media", "[]🇸🇬 新加坡-Media", "[]🇰🇷 韩国-Media", "[]🇷🇺 俄罗斯-Media", "[]🇮🇳 印度-Media", "[]🇧🇬 保加利亚-Media", "[]🇧🇷 巴西-Media", "[]🇨🇭 瑞士-Media", "[]🇨🇿 捷克-Media", "[]🇱🇻 拉脱维亚-Media", "[]🇳🇱 荷兰-Media", "[]🇵🇱 波兰-Media", "[]🇹🇭 泰国-Media", "[]🇹🇷 土耳其-Media", "[]🇺🇦 乌克兰-Media", "[]🇻🇳 越南-Media", "[]🇹🇼 台湾-SUB1", "[]🇹🇼 台湾-SUB2", "[]🇹🇼 台湾-SUB3", "[]🇺🇸 美国-SUB1", "[]🇺🇸 美国-SUB2", "[]🇺🇸 美国-SUB3", "[]🇭🇰 香港-SUB1", "[]🇭🇰 香港-SUB2", "[]🇭🇰 香港-SUB3", "[]🇬🇧 英国", "[]🇯🇵 日本-SUB1", "[]🇯🇵 日本-SUB2", "[]🇯🇵 日本-SUB3", "[]🇸🇬 新加坡-SUB1", "[]🇸🇬 新加坡-SUB2", "[]🇸🇬 新加坡-SUB3", "[]🇷🇺 俄罗斯-SUB1", "[]🇷🇺 俄罗斯-SUB2", "[]🇷🇺 俄罗斯-SUB3", "[]🍖 默认代理"]
 
 [[custom_groups]]
 name = "📲 电报消息"
 type = "select"
-rule = ["[]🔄 延迟最低", "[]🇸🇬 新加坡-SUB1", "[]🇸🇬 新加坡-SUB2", "[]🇹🇼 台湾-轮询", "[]🇭🇰 香港-轮询", "[]🇺🇸 美国-轮询", "[]🇹🇼 台湾-SUB1", "[]🇹🇼 台湾-SUB2", "[]🇭🇰 香港-SUB1", "[]🇭🇰 香港-SUB2", "[]🍱 冷门地区", "[]🇯🇵 日本-轮询", "[]🇬🇧 英国", "[]🇷🇺 俄罗斯-SUB1", "[]🇷🇺 俄罗斯-SUB2", "[]🇷🇺 俄罗斯-轮询", "[]🍖 默认代理"]
 disable_udp = false
+rule = ["[]🔄 延迟最低", "[]🇸🇬 新加坡-SUB1", "[]🇸🇬 新加坡-SUB2", "[]🇸🇬 新加坡-SUB3", "[]🇹🇼 台湾-轮询", "[]🇭🇰 香港-轮询", "[]🇺🇸 美国-轮询", "[]🇹🇼 台湾-SUB1", "[]🇹🇼 台湾-SUB2", "[]🇹🇼 台湾-SUB3", "[]🇭🇰 香港-SUB1", "[]🇭🇰 香港-SUB2", "[]🇭🇰 香港-SUB3", "[]🍱 冷门地区", "[]🇯🇵 日本-轮询", "[]🇬🇧 英国", "[]🇷🇺 俄罗斯-SUB1", "[]🇷🇺 俄罗斯-SUB2", "[]🇷🇺 俄罗斯-SUB3", "[]🇷🇺 俄罗斯-轮询", "[]🍖 默认代理"]
 
 [[custom_groups]]
 name = "🎬 推趣影音"
 type = "select"
-rule = ["[]🔄 延迟最低", "[]🇺🇸 美国-轮询", "[]🇺🇸 美国-SUB1", "[]🇺🇸 美国-SUB2", "[]🍱 冷门地区", "[]🇯🇵 日本-轮询", "[]🇯🇵 日本-SUB1", "[]🇯🇵 日本-SUB2", "[]🇬🇧 英国", "[]🇭🇰 香港-轮询", "[]🇭🇰 香港-SUB1", "[]🇭🇰 香港-SUB2", "[]🇹🇼 台湾-轮询", "[]🇹🇼 台湾-SUB1", "[]🇹🇼 台湾-SUB2", "[]🍖 默认代理"]
 disable_udp = false
+rule = ["[]🔄 延迟最低", "[]🇺🇸 美国-轮询", "[]🇺🇸 美国-SUB1", "[]🇺🇸 美国-SUB2", "[]🇺🇸 美国-SUB3", "[]🍱 冷门地区", "[]🇯🇵 日本-轮询", "[]🇯🇵 日本-SUB1", "[]🇯🇵 日本-SUB2", "[]🇯🇵 日本-SUB3", "[]🇬🇧 英国", "[]🇭🇰 香港-轮询", "[]🇭🇰 香港-SUB1", "[]🇭🇰 香港-SUB2", "[]🇭🇰 香港-SUB3", "[]🇹🇼 台湾-轮询", "[]🇹🇼 台湾-SUB1", "[]🇹🇼 台湾-SUB2", "[]🇹🇼 台湾-SUB3", "[]🍖 默认代理"]
 
 [[custom_groups]]
 name = "🥥 DNS Improvement"
 type = "select"
-rule = ["[]🎯 直连服务", "(🇨🇳)", "[]🔄 延迟最低", "[]🍖 默认代理"]
 disable_udp = false
+rule = ["[]🎯 直连服务", "(🇨🇳)", "[]🔄 延迟最低", "[]🍖 默认代理"]
 
 [[custom_groups]]
 name = "🚦 DMCA Sensitive"
 type = "select"
-rule = ["[]🎯 直连服务", "[]🌏 大陆服务", "(灭霸)", "[]🍖 默认代理"]
 disable_udp = false
+rule = ["[]🎯 直连服务", "[]🌏 大陆服务", "(灭霸)", "[]🍖 默认代理"]
 
 [[custom_groups]]
 name = "🕸️ 局域网服务"
 type = "select"
-rule = ["[]🎯 直连服务", "[]🍖 默认代理"]
 disable_udp = false
+rule = ["[]🎯 直连服务", "[]🍖 默认代理"]
 
 [[custom_groups]]
 name = "🚀 SpeedTest"
 type = "select"
-rule = ["[]🎯 直连服务", "[]🍖 默认代理", ".*"]
 disable_udp = false
+rule = ["[]🎯 直连服务", "[]🍖 默认代理`.*"]
 
 [[custom_groups]]
 name = "🇹🇼 台湾-延迟最低"
 type = "url-test"
-rule = ["[]🇹🇼 台湾-SUB1", "[]🇹🇼 台湾-SUB2"]
-url = "http://connectivitycheck.gstatic.com/generate_204"
+disable_udp = false
+rule = ["[]🇹🇼 台湾-SUB1", "[]🇹🇼 台湾-SUB2", "[]🇹🇼 台湾-SUB3"]
+url = "http://cp.cloudflare.com/generate_204"
 interval = 180
-tolerance = 60
+tolerance = 20
 lazy = true
 
 [[custom_groups]]
 name = "🇹🇼 台湾-轮询"
 type = "fallback"
-rule = ["[]🇹🇼 台湾-延迟最低", "[]🇹🇼 台湾-SUB1", "[]🇹🇼 台湾-SUB2"]
-url = "http://connectivitycheck.gstatic.com/generate_204"
+disable_udp = false
+rule = ["[]🇹🇼 台湾-延迟最低", "[]🇹🇼 台湾-SUB1", "[]🇹🇼 台湾-SUB2", "[]🇹🇼 台湾-SUB3"]
+url = "http://cp.cloudflare.com/generate_204"
 interval = 180
-tolerance = 60
+tolerance = 20
 
 [[custom_groups]]
 name = "🇹🇼 台湾-SUB1"
 type = "url-test"
-rule = ["!!GROUPID=0!!(^🇹🇼.*台.*(?!▷|回|转))", "[]REJECT"]
-url = "http://connectivitycheck.gstatic.com/generate_204"
+disable_udp = false
+rule = ["!!GROUPID=0!!(^🇹🇼.*(?!▷|回|转))", "[]REJECT"]
+url = "http://cp.cloudflare.com/generate_204"
 interval = 180
-tolerance = 60
+tolerance = 20
 lazy = true
 
 [[custom_groups]]
 name = "🇹🇼 台湾-SUB2"
 type = "url-test"
-rule = ["!!GROUPID=1!!(^🇹🇼.*台.*(?!▷|回|转))", "[]REJECT"]
-url = "http://connectivitycheck.gstatic.com/generate_204"
+disable_udp = false
+rule = ["!!GROUPID=1!!(^🇹🇼.*(?!▷|回|转))", "[]REJECT"]
+url = "http://cp.cloudflare.com/generate_204"
 interval = 180
-tolerance = 60
+tolerance = 20
+lazy = true
+
+[[custom_groups]]
+name = "🇹🇼 台湾-SUB3"
+type = "url-test"
+disable_udp = false
+rule = ["!!GROUPID=2!!(^🇹🇼.*(?!▷|回|转))", "[]REJECT"]
+url = "http://cp.cloudflare.com/generate_204"
+interval = 180
+tolerance = 20
 lazy = true
 
 [[custom_groups]]
 name = "🇭🇰 香港-延迟最低"
 type = "url-test"
-rule = ["[]🇭🇰 香港-SUB1", "[]🇭🇰 香港-SUB2"]
-url = "http://connectivitycheck.gstatic.com/generate_204"
+disable_udp = false
+rule = ["[]🇭🇰 香港-SUB1", "[]🇭🇰 香港-SUB2", "[]🇭🇰 香港-SUB3"]
+url = "http://cp.cloudflare.com/generate_204"
 interval = 180
-tolerance = 60
+tolerance = 20
 lazy = true
 
 [[custom_groups]]
 name = "🇭🇰 香港-轮询"
 type = "fallback"
-rule = ["[]🇭🇰 香港-延迟最低", "[]🇭🇰 香港-SUB1", "[]🇭🇰 香港-SUB2"]
-url = "http://connectivitycheck.gstatic.com/generate_204"
+disable_udp = false
+rule = ["[]🇭🇰 香港-延迟最低", "[]🇭🇰 香港-SUB1", "[]🇭🇰 香港-SUB2", "[]🇭🇰 香港-SUB3"]
+url = "http://cp.cloudflare.com/generate_204"
 interval = 180
-tolerance = 60
+tolerance = 20
 
 [[custom_groups]]
 name = "🇭🇰 香港-SUB1"
 type = "url-test"
-rule = ["!!GROUPID=0!!(^🇭🇰.*港.*(?!▷|回|转))", "[]REJECT"]
-url = "http://connectivitycheck.gstatic.com/generate_204"
+disable_udp = false
+rule = ["!!GROUPID=0!!(^🇭🇰.*(?!▷|回|转))", "[]REJECT"]
+url = "http://cp.cloudflare.com/generate_204"
 interval = 180
-tolerance = 60
+tolerance = 20
 lazy = true
 
 [[custom_groups]]
 name = "🇭🇰 香港-SUB2"
 type = "url-test"
-rule = ["!!GROUPID=1!!(^🇭🇰.*港.*(?!▷|回|转))", "[]REJECT"]
-url = "http://connectivitycheck.gstatic.com/generate_204"
+disable_udp = false
+rule = ["!!GROUPID=1!!(^🇭🇰.*(?!▷|回|转))", "[]REJECT"]
+url = "http://cp.cloudflare.com/generate_204"
 interval = 180
-tolerance = 60
+tolerance = 20
+lazy = true
+
+[[custom_groups]]
+name = "🇭🇰 香港-SUB3"
+type = "url-test"
+disable_udp = false
+rule = ["!!GROUPID=2!!(^🇭🇰.*(?!▷|回|转))", "[]REJECT"]
+url = "http://cp.cloudflare.com/generate_204"
+interval = 180
+tolerance = 20
 lazy = true
 
 [[custom_groups]]
 name = "🇬🇧 英国"
 type = "url-test"
-rule = ["(^🇬🇧.*伦敦|英.*(?!▷|回|转))", "[]REJECT"]
-url = "http://connectivitycheck.gstatic.com/generate_204"
+disable_udp = false
+rule = ["(^🇬🇧.*(?!▷|回|转))", "[]REJECT"]
+url = "http://cp.cloudflare.com/generate_204"
 interval = 180
-tolerance = 60
+tolerance = 20
 lazy = true
 
 [[custom_groups]]
 name = "🇺🇸 美国-延迟最低"
 type = "url-test"
-rule = ["[]🇺🇸 美国-SUB1", "[]🇺🇸 美国-SUB2"]
-url = "http://connectivitycheck.gstatic.com/generate_204"
+disable_udp = false
+rule = ["[]🇺🇸 美国-SUB1", "[]🇺🇸 美国-SUB2", "[]🇺🇸 美国-SUB3"]
+url = "http://cp.cloudflare.com/generate_204"
 interval = 180
-tolerance = 60
+tolerance = 20
 lazy = true
 
 [[custom_groups]]
 name = "🇺🇸 美国-轮询"
 type = "fallback"
-rule = ["[]🇺🇸 美国-延迟最低", "[]🇺🇸 美国-SUB1", "[]🇺🇸 美国-SUB2"]
-url = "http://connectivitycheck.gstatic.com/generate_204"
+disable_udp = false
+rule = ["[]🇺🇸 美国-延迟最低", "[]🇺🇸 美国-SUB1", "[]🇺🇸 美国-SUB2", "[]🇺🇸 美国-SUB3"]
+url = "http://cp.cloudflare.com/generate_204"
 interval = 180
-tolerance = 60
+tolerance = 20
 
 [[custom_groups]]
 name = "🇺🇸 美国-SUB1"
 type = "url-test"
-rule = ["!!GROUPID=0!!(^🇺🇸.*美.*(?!▷|回|转))", "[]REJECT"]
-url = "http://connectivitycheck.gstatic.com/generate_204"
+disable_udp = false
+rule = ["!!GROUPID=0!!(^🇺🇸.*(?!▷|回|转))", "[]REJECT"]
+url = "http://cp.cloudflare.com/generate_204"
 interval = 180
-tolerance = 60
+tolerance = 20
 lazy = true
 
 [[custom_groups]]
 name = "🇺🇸 美国-SUB2"
 type = "url-test"
-rule = ["!!GROUPID=1!!(^🇺🇸.*美.*(?!▷|回|转))", "[]REJECT"]
-url = "http://connectivitycheck.gstatic.com/generate_204"
+disable_udp = false
+rule = ["!!GROUPID=1!!(^🇺🇸.*(?!▷|回|转))", "[]REJECT"]
+url = "http://cp.cloudflare.com/generate_204"
 interval = 180
-tolerance = 60
+tolerance = 20
+lazy = true
+
+[[custom_groups]]
+name = "🇺🇸 美国-SUB3"
+type = "url-test"
+disable_udp = false
+rule = ["!!GROUPID=2!!(^🇺🇸.*(?!▷|回|转))", "[]REJECT"]
+url = "http://cp.cloudflare.com/generate_204"
+interval = 180
+tolerance = 20
 lazy = true
 
 [[custom_groups]]
 name = "🇯🇵 日本-延迟最低"
 type = "url-test"
-rule = ["[]🇯🇵 日本-SUB1", "[]🇯🇵 日本-SUB2"]
-url = "http://connectivitycheck.gstatic.com/generate_204"
+disable_udp = false
+rule = ["[]🇯🇵 日本-SUB1", "[]🇯🇵 日本-SUB2", "[]🇯🇵 日本-SUB3"]
+url = "http://cp.cloudflare.com/generate_204"
 interval = 180
-tolerance = 60
+tolerance = 20
 lazy = true
 
 [[custom_groups]]
 name = "🇯🇵 日本-轮询"
 type = "fallback"
-rule = ["[]🇯🇵 日本-延迟最低", "[]🇯🇵 日本-SUB1", "[]🇯🇵 日本-SUB2"]
-url = "http://connectivitycheck.gstatic.com/generate_204"
+disable_udp = false
+rule = ["[]🇯🇵 日本-延迟最低", "[]🇯🇵 日本-SUB1", "[]🇯🇵 日本-SUB2", "[]🇯🇵 日本-SUB3"]
+url = "http://cp.cloudflare.com/generate_204"
 interval = 180
-tolerance = 60
+tolerance = 20
 
 [[custom_groups]]
 name = "🇯🇵 日本-SUB1"
 type = "url-test"
-rule = ["!!GROUPID=0!!(^🇯🇵.*日.*(?!▷|回|转))", "[]REJECT"]
-url = "http://connectivitycheck.gstatic.com/generate_204"
+disable_udp = false
+rule = ["!!GROUPID=0!!(^🇯🇵.*(?!▷|回|转))", "[]REJECT"]
+url = "http://cp.cloudflare.com/generate_204"
 interval = 180
 tolerance = 60
 lazy = true
@@ -1109,8 +935,19 @@ lazy = true
 [[custom_groups]]
 name = "🇯🇵 日本-SUB2"
 type = "url-test"
-rule = ["!!GROUPID=1!!(^🇯🇵.*日.*(?!▷|回|转))", "[]REJECT"]
-url = "http://connectivitycheck.gstatic.com/generate_204"
+disable_udp = false
+rule = ["!!GROUPID=1!!(^🇯🇵.*(?!▷|回|转))", "[]REJECT"]
+url = "http://cp.cloudflare.com/generate_204"
+interval = 180
+tolerance = 60
+lazy = true
+
+[[custom_groups]]
+name = "🇯🇵 日本-SUB3"
+type = "url-test"
+disable_udp = false
+rule = ["!!GROUPID=2!!(^🇯🇵.*(?!▷|回|转))", "[]REJECT"]
+url = "http://cp.cloudflare.com/generate_204"
 interval = 180
 tolerance = 60
 lazy = true
@@ -1118,25 +955,28 @@ lazy = true
 [[custom_groups]]
 name = "🇷🇺 俄罗斯-延迟最低"
 type = "url-test"
-rule = ["[]🇷🇺 俄罗斯-SUB1", "[]🇷🇺 俄罗斯-SUB2"]
-url = "http://connectivitycheck.gstatic.com/generate_204"
+disable_udp = false
+rule = ["[]🇷🇺 俄罗斯-SUB1", "[]🇷🇺 俄罗斯-SUB2", "[]🇷🇺 俄罗斯-SUB3"]
+url = "http://cp.cloudflare.com/generate_204"
 interval = 180
-tolerance = 60
+tolerance = 20
 lazy = true
 
 [[custom_groups]]
 name = "🇷🇺 俄罗斯-轮询"
 type = "fallback"
-rule = ["[]🇷🇺 俄罗斯-延迟最低", "[]🇷🇺 俄罗斯-SUB1", "[]🇷🇺 俄罗斯-SUB2"]
-url = "http://connectivitycheck.gstatic.com/generate_204"
+disable_udp = false
+rule = ["[]🇷🇺 俄罗斯-延迟最低", "[]🇷🇺 俄罗斯-SUB1", "[]🇷🇺 俄罗斯-SUB2", "[]🇷🇺 俄罗斯-SUB3"]
+url = "http://cp.cloudflare.com/generate_204"
 interval = 180
-tolerance = 60
+tolerance = 20
 
 [[custom_groups]]
 name = "🇷🇺 俄罗斯-SUB1"
 type = "url-test"
-rule = ["!!GROUPID=0!!(^🇷🇺.*俄.*(?!▷|回|转))", "[]REJECT"]
-url = "http://connectivitycheck.gstatic.com/generate_204"
+disable_udp = false
+rule = ["!!GROUPID=0!!(^🇷🇺.*(?!▷|回|转))", "[]REJECT"]
+url = "http://cp.cloudflare.com/generate_204"
 interval = 180
 tolerance = 60
 lazy = true
@@ -1144,8 +984,19 @@ lazy = true
 [[custom_groups]]
 name = "🇷🇺 俄罗斯-SUB2"
 type = "url-test"
-rule = ["!!GROUPID=1!!(^🇷🇺.*俄.*(?!▷|回|转))", "[]REJECT"]
-url = "http://connectivitycheck.gstatic.com/generate_204"
+disable_udp = false
+rule = ["!!GROUPID=1!!(^🇷🇺.*(?!▷|回|转))", "[]REJECT"]
+url = "http://cp.cloudflare.com/generate_204"
+interval = 180
+tolerance = 60
+lazy = true
+
+[[custom_groups]]
+name = "🇷🇺 俄罗斯-SUB3"
+type = "url-test"
+disable_udp = false
+rule = ["!!GROUPID=2!!(^🇷🇺.*(?!▷|回|转))", "[]REJECT"]
+url = "http://cp.cloudflare.com/generate_204"
 interval = 180
 tolerance = 60
 lazy = true
@@ -1153,192 +1004,350 @@ lazy = true
 [[custom_groups]]
 name = "🇸🇬 新加坡-延迟最低"
 type = "url-test"
-rule = ["[]🇸🇬 新加坡-SUB1", "[]🇸🇬 新加坡-SUB2"]
-url = "http://connectivitycheck.gstatic.com/generate_204"
+disable_udp = false
+rule = ["[]🇸🇬 新加坡-SUB1", "[]🇸🇬 新加坡-SUB2", "[]🇸🇬 新加坡-SUB3"]
+url = "http://cp.cloudflare.com/generate_204"
 interval = 180
-tolerance = 60
+tolerance = 20
 lazy = true
 
 [[custom_groups]]
 name = "🇸🇬 新加坡-轮询"
 type = "fallback"
-rule = ["[]🇸🇬 新加坡-延迟最低", "[]🇸🇬 新加坡-SUB1", "[]🇸🇬 新加坡-SUB2"]
-url = "http://connectivitycheck.gstatic.com/generate_204"
+disable_udp = false
+rule = ["[]🇸🇬 新加坡-延迟最低", "[]🇸🇬 新加坡-SUB1", "[]🇸🇬 新加坡-SUB2", "[]🇸🇬 新加坡-SUB3"]
+url = "http://cp.cloudflare.com/generate_204"
 interval = 180
-tolerance = 60
+tolerance = 20
 
 [[custom_groups]]
 name = "🇸🇬 新加坡-SUB1"
 type = "url-test"
-rule = ["!!GROUPID=0!!(^🇸🇬.*新.*(?!▷|回|转))", "[]REJECT"]
-url = "http://connectivitycheck.gstatic.com/generate_204"
+disable_udp = false
+rule = ["!!GROUPID=0!!(^🇸🇬.*(?!▷|回|转))", "[]REJECT"]
+url = "http://cp.cloudflare.com/generate_204"
 interval = 180
-tolerance = 60
+tolerance = 20
 lazy = true
 
 [[custom_groups]]
 name = "🇸🇬 新加坡-SUB2"
 type = "url-test"
-rule = ["!!GROUPID=1!!(^🇸🇬.*新.*(?!▷|回|转))", "[]REJECT"]
-url = "http://connectivitycheck.gstatic.com/generate_204"
+disable_udp = false
+rule = ["!!GROUPID=1!!(^🇸🇬.*(?!▷|回|转))", "[]REJECT"]
+url = "http://cp.cloudflare.com/generate_204"
 interval = 180
-tolerance = 60
+tolerance = 20
+lazy = true
+
+[[custom_groups]]
+name = "🇸🇬 新加坡-SUB3"
+type = "url-test"
+disable_udp = false
+rule = ["!!GROUPID=2!!(^🇸🇬.*(?!▷|回|转))", "[]REJECT"]
+url = "http://cp.cloudflare.com/generate_204"
+interval = 180
+tolerance = 20
 lazy = true
 
 [[custom_groups]]
 name = "🇰🇷 韩国-延迟最低"
 type = "url-test"
-rule = ["[]🇰🇷 韩国-SUB1", "[]🇰🇷 韩国-SUB2"]
-url = "http://connectivitycheck.gstatic.com/generate_204"
+disable_udp = false
+rule = ["[]🇰🇷 韩国-SUB1", "[]🇰🇷 韩国-SUB2", "[]🇰🇷 韩国-SUB3"]
+url = "http://cp.cloudflare.com/generate_204"
 interval = 180
-tolerance = 60
+tolerance = 20
 lazy = true
 
 [[custom_groups]]
 name = "🇰🇷 韩国-轮询"
 type = "fallback"
-rule = ["[]🇰🇷 韩国-延迟最低", "[]🇰🇷 韩国-SUB1", "[]🇰🇷 韩国-SUB2"]
-url = "http://connectivitycheck.gstatic.com/generate_204"
+disable_udp = false
+rule = ["[]🇰🇷 韩国-延迟最低", "[]🇰🇷 韩国-SUB1", "[]🇰🇷 韩国-SUB2", "[]🇰🇷 韩国-SUB3"]
+url = "http://cp.cloudflare.com/generate_204"
 interval = 180
-tolerance = 60
+tolerance = 20
 
 [[custom_groups]]
 name = "🇰🇷 韩国-SUB1"
 type = "url-test"
-rule = ["!!GROUPID=0!!(^🇰🇷.*韩.*(?!▷|回|转))", "[]REJECT"]
-url = "http://connectivitycheck.gstatic.com/generate_204"
+disable_udp = false
+rule = ["!!GROUPID=0!!(^🇰🇷.*(?!▷|回|转))", "[]REJECT"]
+url = "http://cp.cloudflare.com/generate_204"
 interval = 180
-tolerance = 60
+tolerance = 20
 lazy = true
 
 [[custom_groups]]
 name = "🇰🇷 韩国-SUB2"
 type = "url-test"
-rule = ["!!GROUPID=1!!(^🇰🇷.*韩.*(?!▷|回|转))", "[]REJECT"]
-url = "http://connectivitycheck.gstatic.com/generate_204"
+disable_udp = false
+rule = ["!!GROUPID=1!!(^🇰🇷.*(?!▷|回|转))", "[]REJECT"]
+url = "http://cp.cloudflare.com/generate_204"
 interval = 180
-tolerance = 60
+tolerance = 20
+lazy = true
+
+[[custom_groups]]
+name = "🇰🇷 韩国-SUB3"
+type = "url-test"
+disable_udp = false
+rule = ["!!GROUPID=2!!(^🇰🇷.*(?!▷|回|转))", "[]REJECT"]
+url = "http://cp.cloudflare.com/generate_204"
+interval = 180
+tolerance = 20
 lazy = true
 
 [[custom_groups]]
 name = "🔄 延迟最低"
 type = "url-test"
+disable_udp = false
 rule = ["[]🇺🇸 美国-延迟最低", "[]🇭🇰 香港-延迟最低", "[]🇹🇼 台湾-延迟最低", "[]🇯🇵 日本-延迟最低", "[]🇷🇺 俄罗斯-延迟最低", "[]🍱 冷门地区", "[]🇸🇬 新加坡-延迟最低", "[]🇬🇧 英国", "[]🇰🇷 韩国-延迟最低"]
-url = "http://connectivitycheck.gstatic.com/generate_204"
+url = "http://cp.cloudflare.com/generate_204"
 interval = 180
-tolerance = 60
+tolerance = 20
 lazy = true
 
 [[custom_groups]]
 name = "🍱 冷门地区"
 type = "url-test"
-rule = ["(🇩🇪)", "(🇹🇷)", "(🇵🇭)", "(🇮🇪)", "(🇫🇷)", "(🇮🇳)", "(🇨🇦)", "(🇧🇷)", "(🇲🇾)", "[]REJECT"]
-url = "http://connectivitycheck.gstatic.com/generate_204"
+disable_udp = false
+rule = ["(🇦🇪)", "(🇦🇺)", "(🇧🇩)", "(🇧🇬)", "(🇧🇷)", "(🇨🇦)", "(🇨🇭)", "(🇨🇿)", "(🇩🇪)", "(🇫🇷)", "(🇬🇧)", "(🇮🇪)", "(🇮🇳)", "(🇰🇭)", "(🇱🇻)", "(🇲🇾)", "(🇳🇱)", "(🇵🇭)", "(🇵🇱)", "(🇷🇺)", "(🇸🇦)", "(🇹🇭)", "(🇹🇷)", "(🇺🇦)", "(🇻🇳)", "(🇿🇦)", "[]REJECT"]
+url = "http://cp.cloudflare.com/generate_204"
 interval = 180
-tolerance = 60
+tolerance = 20
 lazy = true
 
 [[custom_groups]]
 name = "🇭🇰 香港-Media"
 type = "url-test"
+disable_udp = false
 rule = ["(^🇭🇰.*\[M\])", "[]REJECT"]
-url = "http://connectivitycheck.gstatic.com/generate_204"
+url = "http://cp.cloudflare.com/generate_204"
 interval = 180
-tolerance = 60
+tolerance = 20
 lazy = true
 
 [[custom_groups]]
 name = "🇹🇼 台湾-Media"
 type = "url-test"
+disable_udp = false
 rule = ["(^🇹🇼.*\[M\])", "[]REJECT"]
-url = "http://connectivitycheck.gstatic.com/generate_204"
+url = "http://cp.cloudflare.com/generate_204"
 interval = 180
-tolerance = 60
+tolerance = 20
 lazy = true
 
 [[custom_groups]]
 name = "🇬🇧 英国-Media"
 type = "url-test"
+disable_udp = false
 rule = ["(^🇬🇧.*\[M\])", "[]REJECT"]
-url = "http://connectivitycheck.gstatic.com/generate_204"
+url = "http://cp.cloudflare.com/generate_204"
 interval = 180
-tolerance = 60
+tolerance = 20
 lazy = true
 
 [[custom_groups]]
 name = "🇺🇸 美国-Media"
 type = "url-test"
+disable_udp = false
 rule = ["(^🇺🇸.*\[M\])", "[]REJECT"]
-url = "http://connectivitycheck.gstatic.com/generate_204"
+url = "http://cp.cloudflare.com/generate_204"
 interval = 180
-tolerance = 60
+tolerance = 20
 lazy = true
 
 [[custom_groups]]
 name = "🇯🇵 日本-Media"
 type = "url-test"
+disable_udp = false
 rule = ["(^🇯🇵.*\[M\])", "[]REJECT"]
-url = "http://connectivitycheck.gstatic.com/generate_204"
+url = "http://cp.cloudflare.com/generate_204"
 interval = 180
-tolerance = 60
+tolerance = 20
 lazy = true
 
 [[custom_groups]]
 name = "🇸🇬 新加坡-Media"
 type = "url-test"
+disable_udp = false
 rule = ["(^🇸🇬.*\[M\])", "[]REJECT"]
-url = "http://connectivitycheck.gstatic.com/generate_204"
+url = "http://cp.cloudflare.com/generate_204"
 interval = 180
-tolerance = 60
+tolerance = 20
 lazy = true
 
 [[custom_groups]]
 name = "🇰🇷 韩国-Media"
 type = "url-test"
+disable_udp = false
 rule = ["(^🇰🇷.*\[M\])", "[]REJECT"]
-url = "http://connectivitycheck.gstatic.com/generate_204"
+url = "http://cp.cloudflare.com/generate_204"
 interval = 180
-tolerance = 60
+tolerance = 20
+lazy = true
+
+[[custom_groups]]
+name = "🇷🇺 俄罗斯-Media"
+type = "url-test"
+disable_udp = false
+rule = ["(^🇷🇺.*\[M\])", "[]REJECT"]
+url = "http://cp.cloudflare.com/generate_204"
+interval = 180
+tolerance = 20
 lazy = true
 
 [[custom_groups]]
 name = "🇮🇳 印度-Media"
 type = "url-test"
+disable_udp = false
 rule = ["(^🇮🇳.*\[M\])", "[]REJECT"]
-url = "http://connectivitycheck.gstatic.com/generate_204"
+url = "http://cp.cloudflare.com/generate_204"
 interval = 180
-tolerance = 60
+tolerance = 20
+lazy = true
+
+[[custom_groups]]
+name = "🇧🇬 保加利亚-Media"
+type = "url-test"
+disable_udp = false
+rule = ["(^🇧🇬.*\[M\])", "[]REJECT"]
+url = "http://cp.cloudflare.com/generate_204"
+interval = 180
+tolerance = 20
+lazy = true
+
+[[custom_groups]]
+name = "🇧🇷 巴西-Media"
+type = "url-test"
+disable_udp = false
+rule = ["(^🇧🇷.*\[M\])", "[]REJECT"]
+url = "http://cp.cloudflare.com/generate_204"
+interval = 180
+tolerance = 20
+lazy = true
+
+[[custom_groups]]
+name = "🇨🇭 瑞士-Media"
+type = "url-test"
+disable_udp = false
+rule = ["(^🇨🇭.*\[M\])", "[]REJECT"]
+url = "http://cp.cloudflare.com/generate_204"
+interval = 180
+tolerance = 20
+lazy = true
+
+[[custom_groups]]
+name = "🇨🇿 捷克-Media"
+type = "url-test"
+disable_udp = false
+rule = ["(^🇨🇿.*\[M\])", "[]REJECT"]
+url = "http://cp.cloudflare.com/generate_204"
+interval = 180
+tolerance = 20
+lazy = true
+
+[[custom_groups]]
+name = "🇱🇻 拉脱维亚-Media"
+type = "url-test"
+disable_udp = false
+rule = ["(^🇱🇻.*\[M\])", "[]REJECT"]
+url = "http://cp.cloudflare.com/generate_204"
+interval = 180
+tolerance = 20
+lazy = true
+
+[[custom_groups]]
+name = "🇳🇱 荷兰-Media"
+type = "url-test"
+disable_udp = false
+rule = ["(^🇳🇱.*\[M\])", "[]REJECT"]
+url = "http://cp.cloudflare.com/generate_204"
+interval = 180
+tolerance = 20
+lazy = true
+
+[[custom_groups]]
+name = "🇵🇱 波兰-Media"
+type = "url-test"
+disable_udp = false
+rule = ["(^🇵🇱.*\[M\])", "[]REJECT"]
+url = "http://cp.cloudflare.com/generate_204"
+interval = 180
+tolerance = 20
+lazy = true
+
+[[custom_groups]]
+name = "🇹🇭 泰国-Media"
+type = "url-test"
+disable_udp = false
+rule = ["(^🇹🇭.*\[M\])", "[]REJECT"]
+url = "http://cp.cloudflare.com/generate_204"
+interval = 180
+tolerance = 20
+lazy = true
+
+[[custom_groups]]
+name = "🇹🇷 土耳其-Media"
+type = "url-test"
+disable_udp = false
+rule = ["(^🇹🇷.*\[M\])", "[]REJECT"]
+url = "http://cp.cloudflare.com/generate_204"
+interval = 180
+tolerance = 20
+lazy = true
+
+[[custom_groups]]
+name = "🇺🇦 乌克兰-Media"
+type = "url-test"
+disable_udp = false
+rule = ["(^🇺🇦.*\[M\])", "[]REJECT"]
+url = "http://cp.cloudflare.com/generate_204"
+interval = 180
+tolerance = 20
+lazy = true
+
+[[custom_groups]]
+name = "🇻🇳 越南-Media"
+type = "url-test"
+disable_udp = false
+rule = ["(^🇻🇳.*\[M\])", "[]REJECT"]
+url = "http://cp.cloudflare.com/generate_204"
+interval = 180
+tolerance = 20
 lazy = true
 
 [[custom_groups]]
 name = "🎯 直连服务"
 type = "select"
-rule = [", "[]DIRECT]
 disable_udp = false
+rule = ["[]DIRECT"]
 
 [[custom_groups]]
 name = "🍥 政府网站"
 type = "select"
-rule = [", "[]🎯 直连服务]
 disable_udp = false
+rule = ["[]🎯 直连服务"]
 
 [[custom_groups]]
 name = "☠️ 软件验证"
 type = "select"
-rule = [", "[]REJECT", "[]🎯 直连服务", "[]🍖 默认代理]
 disable_udp = false
+rule = ["[]REJECT", "[]🎯 直连服务", "[]🍖 默认代理"]
 
-# [[custom_groups]]
-# name = "⛔️ 广告服务"
-# type = "select"
-# rule = [", "[]REJECT", "[]🎯 直连服务]
-# disable_udp = false
+;[[custom_groups]]
+;name = "⛔️ 广告服务"
+;type = "select"
+;disable_udp = false
+;rule = ["[]REJECT", "[]🎯 直连服务"]
 
 [[custom_groups]]
 name = "⏰ 时间校准"
 type = "select"
-rule = [", "[]🎯 直连服务]
 disable_udp = false
+rule = ["[]🎯 直连服务"]
 
 
 [[rulesets]]
@@ -1353,11 +1362,11 @@ ruleset = "https://raw.githubusercontent.com/LM-Firefly/Rules/master/Special/App
 type = "surge-ruleset"
 interval = 3600
 
-# [[rulesets]]
-# group = "⛔️ 广告服务"
-# ruleset = "https://raw.githubusercontent.com/LM-Firefly/Rules/master/Adblock/Adblock.list"
-# type = "surge-ruleset"
-# interval = 3600
+; [[rulesets]]
+; group = "⛔️ 广告服务"
+; ruleset = "https://raw.githubusercontent.com/LM-Firefly/Rules/master/Adblock/Adblock.list"
+; type = "surge-ruleset"
+; interval = 3600
 
 [[rulesets]]
 group = "⏰ 时间校准"
@@ -1545,9 +1554,9 @@ ruleset = "[]MATCH"
 key = "clash.mixed_port"
 value = "18888"
 
-[[template_args]]
-key = "clash.redir_port"
-value = "18890"
+;[[template_args]]
+;key = "clash.redir_port"
+;value = "18890"
 
 [[template_args]]
 key = "clash.allow_lan"

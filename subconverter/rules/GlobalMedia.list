@@ -66,6 +66,7 @@ DOMAIN-SUFFIX,nettyinternet.com
 ## > Bahamut
 DOMAIN-SUFFIX,bahamut.com.tw
 DOMAIN-SUFFIX,gamer.com.tw
+DOMAIN,bahamut.akamaized.net
 DOMAIN,gamer-cds.cdn.hinet.net
 DOMAIN,gamer2-cds.cdn.hinet.net
 ## > BBC
@@ -152,12 +153,14 @@ DOMAIN-SUFFIX,cbsradio.com
 ## >> Paramount
 PROCESS-NAME,com.cbs.app
 USER-AGENT,PPlus*
+DOMAIN-SUFFIX,amlg.io
 DOMAIN-SUFFIX,cbsaavideo.com
 DOMAIN-SUFFIX,cbsi.com
 DOMAIN-SUFFIX,cbsi.live.ott.irdeto.com
 DOMAIN-SUFFIX,cbsivideo.com
 DOMAIN-SUFFIX,cbsplaylistserver.aws.syncbak.com
 DOMAIN-SUFFIX,cbsservice.aws.syncbak.com
+DOMAIN-SUFFIX,mtvnservices.com
 DOMAIN-SUFFIX,paramount.com
 DOMAIN-SUFFIX,paramountplus.com
 DOMAIN-SUFFIX,pplusstatic.com
