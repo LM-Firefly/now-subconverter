@@ -149,7 +149,7 @@ write_managed_config = true
 managed_config_prefix = "http://127.0.0.1:25500"
 
 # Managed config update interval in seconds, determine how long the config will be updated.
-config_update_interval = 86400
+config_update_interval = 3600
 
 # If config_update_strict is set to true, Surge will require a force update after the interval.
 config_update_strict = false
@@ -210,7 +210,7 @@ update_ruleset_on_request = false
 # group = "Proxy"
 # ruleset = "https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Unbreak.list"
 # type = "surge-ruleset"
-# interval = 86400
+# interval = 3600
 
 [[rulesets]]
 import = "snippets/rulesets.toml"
