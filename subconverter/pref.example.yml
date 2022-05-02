@@ -11,14 +11,14 @@ common:
   filter_script: ''
   default_external_config: '' # config/example_external_config.yml
   base_path: base
-  clash_rule_base: base/all_base.tpl
-  surge_rule_base: base/all_base.tpl
-  surfboard_rule_base: base/all_base.tpl
-  mellow_rule_base: base/all_base.tpl
-  quan_rule_base: base/all_base.tpl
-  quanx_rule_base: base/all_base.tpl
-  loon_rule_base: base/all_base.tpl
-  sssub_rule_base: base/all_base.tpl
+  clash_rule_base: https://raw.githubusercontent.com/LM-Firefly/Rules/master/Subconverter-base/all-base.tpl
+  surge_rule_base: https://raw.githubusercontent.com/LM-Firefly/Rules/master/Subconverter-base/all-base.tpl
+  surfboard_rule_base: https://raw.githubusercontent.com/LM-Firefly/Rules/master/Subconverter-base/all-base.tpl
+  mellow_rule_base: https://raw.githubusercontent.com/LM-Firefly/Rules/master/Subconverter-base/all-base.tpl
+  quan_rule_base: https://raw.githubusercontent.com/LM-Firefly/Rules/master/Subconverter-base/all-base.tpl
+  quanx_rule_base: https://raw.githubusercontent.com/LM-Firefly/Rules/master/Subconverter-base/all-base.tpl
+  loon_rule_base: https://raw.githubusercontent.com/LM-Firefly/Rules/master/Subconverter-base/all-base.tpl
+  sssub_rule_base: https://raw.githubusercontent.com/LM-Firefly/Rules/master/Subconverter-base/all-base.tpl
   proxy_config: SYSTEM
   proxy_ruleset: SYSTEM
   proxy_subscription: SYSTEM
@@ -67,7 +67,7 @@ managed_config:
   write_managed_config: true
   managed_config_prefix: 'http://127.0.0.1:25500'
   config_update_interval: 3600
-  config_update_strict: false
+  config_update_strict: true
   quanx_device_id: ''
 
 surge_external_proxy:
@@ -140,7 +140,7 @@ tasks:
 server:
   listen: 0.0.0.0
   port: 25500
-  serve_file_root: ''
+  serve_file_root: './sub-web'
 
 advanced:
   log_level: info
