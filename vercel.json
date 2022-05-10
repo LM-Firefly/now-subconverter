@@ -9,7 +9,7 @@
       "use": "vercel-static-bin",
       "config": {
         "port": 25500,
-        "timeout": 3000,
+        "timeout": 1500,
         "includeFiles": ["subconverter/**"]
       }
     }
