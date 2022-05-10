@@ -6,7 +6,7 @@
   "builds": [
     {
       "src": "subconverter/subconverter.exe",
-      "use": "vercel-static-bin",
+      "use": "@vercel/static",
       "config": {
         "port": 25500,
         "timeout": 3000,
