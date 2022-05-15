@@ -109,7 +109,7 @@ jobs:
           intervalSeconds: 30
       - name: '[action]Download artifact'
         if: ${{ env.branch == 'action' && steps.wait.outputs.conclusion == 'success' }}
-        uses: dawidd6/action-download-artifact@v2.14.1
+        uses: dawidd6/action-download-artifact@v2.19.0
         with:
           workflow: build.yml
           commit: ${{ steps.get_sha.outputs.sha }}
@@ -174,7 +174,7 @@ jobs:
           sudo cp -rf files/* subconverter/
 
       - name: Add & Commit
-        uses: EndBug/add-and-commit@v7.3.0
+        uses: EndBug/add-and-commit@v9.0.0
         with:
           author_name: GitHub Action
           author_email: noreply@github.com
