@@ -109,7 +109,7 @@ jobs:
           intervalSeconds: 30
       - name: '[action]Download artifact'
         if: ${{ env.branch == 'action' && steps.wait.outputs.conclusion == 'success' }}
-        uses: dawidd6/action-download-artifact@v2.19.0
+        uses: dawidd6/action-download-artifact@v6
         with:
           workflow: build.yml
           commit: ${{ steps.get_sha.outputs.sha }}
